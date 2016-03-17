@@ -71,14 +71,7 @@ with(inst)
     }
 */
 
-with (par_dudes)
-    {
-    if distance_to_object(obj_beam) &lt;= 0
-        {
-        physics_apply_force(x,y,0,-10)
-        physics_apply_torque(0.5)
-        }
-    }
+
 </string>
           </argument>
         </arguments>

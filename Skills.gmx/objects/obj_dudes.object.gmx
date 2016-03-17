@@ -30,6 +30,7 @@ jump = false
 moving  = false
 speedx =0
  dirx = 0
+ dead = false
 </string>
           </argument>
         </arguments>
@@ -150,9 +151,14 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (touch_ground = false) and jump == false
+            <string>scr_beam(-10,0.5)
+if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
+    if phy_speed_y&gt;8
+        dead = true
+    else
+        dead = false
 }
 
 if (touch_ground = true)
@@ -164,7 +170,8 @@ if (phy_rotation &gt;= 10 or phy_rotation &lt;= -10)  and alarm[0] &lt;= 0
     phy_speed_x = 0
     alarm[0] = 30
     alarm[2] = 30
-    }
+}
+
 if moving = false
 {
 dirx = choose(-1,1)
@@ -176,6 +183,8 @@ alarm[2] = steps
 phy_speed_x = speedx * dirx
 
 }
+
+
     
 touch_ground = false;
 </string>
@@ -257,6 +266,8 @@ alarm[1] = 10
             <kind>1</kind>
             <string>//321321321
   touch_ground = true;
+  if dead = true
+  instance_destroy()
 </string>
           </argument>
         </arguments>
@@ -282,6 +293,8 @@ alarm[1] = 10
             <string>draw_self()
 draw_set_colour(c_black)
 //draw_text(x,y-20,phy_rotation)
+draw_self()
+draw_text(x,y,phy_speed_y)
 </string>
           </argument>
         </arguments>

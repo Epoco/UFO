@@ -70,9 +70,9 @@ instance_change(obj_rock_active,1)
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,3</point>
-    <point>15,3</point>
-    <point>15,15</point>
-    <point>0,15</point>
+    <point>0,6</point>
+    <point>30,6</point>
+    <point>30,30</point>
+    <point>0,30</point>
   </PhysicsShapePoints>
 </object>
