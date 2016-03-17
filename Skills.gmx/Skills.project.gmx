@@ -14,9 +14,14 @@
     <sprite>sprites\spr_tri</sprite>
     <sprite>sprites\spr_car</sprite>
     <sprite>sprites\spr_bird</sprite>
+    <sprite>sprites\spr_rock_active</sprite>
+    <sprite>sprites\spr_rock_sleep</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_beam.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="dudes">
       <object>objects\obj_soldier</object>
@@ -32,6 +37,8 @@
     <object>objects\obj_scoretext</object>
     <object>objects\object8</object>
     <object>objects\obj_bird</object>
+    <object>objects\obj_rock_sleep</object>
+    <object>objects\obj_rock_active</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
