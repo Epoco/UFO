@@ -71,7 +71,7 @@ with(inst)
     }
 */
 
-with (obj_dudes)
+with (par_dudes)
     {
     if distance_to_object(obj_beam) &lt;= 0
         {

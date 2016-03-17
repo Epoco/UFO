@@ -14,6 +14,7 @@
     <sprite>sprites\spr_tri</sprite>
     <sprite>sprites\spr_car</sprite>
     <sprite>sprites\spr_bird</sprite>
+    <sprite>sprites\spr_bullet</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,6 +23,7 @@
       <object>objects\obj_soldier</object>
       <object>objects\obj_dudes</object>
       <object>objects\par_dudes</object>
+      <object>objects\obj_bullet</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_control</object>
