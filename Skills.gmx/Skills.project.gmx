@@ -15,15 +15,19 @@
     <sprite>sprites\spr_car</sprite>
     <sprite>sprites\spr_bird</sprite>
     <sprite>sprites\spr_bullet</sprite>
+    <sprite>sprites\spr_bullet2</sprite>
+    <sprite>sprites\spr_tank</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <objects name="dudes">
       <object>objects\obj_soldier</object>
+      <object>objects\obj_tank</object>
       <object>objects\obj_dudes</object>
       <object>objects\par_dudes</object>
       <object>objects\obj_bullet</object>
+      <object>objects\obj_bullet2</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_control</object>
