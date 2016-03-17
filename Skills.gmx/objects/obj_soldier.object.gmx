@@ -28,6 +28,43 @@
             <string>touch_ground = false;
 jump = false
 xspeed = 5;
+canShoot = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (touch_ground == true)
+    if (xdis &lt; 120 &amp;&amp; xdis &gt; -120)
+        bullet = instance_create(x,y,obj_bullet);
+
+with(bullet){
+    ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
+    xx = lengthdir_x(100,ufoPos);
+    yy = lengthdir_y(100,ufoPos);
+    physics_apply_impulse(x,y,xx,yy);
+}
+
+if (canShoot = true){
+    alarm[2] = 120;
+}
 </string>
           </argument>
         </arguments>
@@ -110,17 +147,24 @@ if (phy_rotation &gt;= 10 or phy_rotation &lt;= -10)  and alarm[0] &lt;= 0
 }
 
 xdis = (obj_ufo.phy_position_x - phy_position_x);
-xspeed = clamp(xspeed,0,7);
+xspeed = clamp(xspeed,0,5);
 
 if (touch_ground = true){
-    if (xdis &gt; 100 ){
+    if (xdis &gt; 120 ){
+        canShoot = false;
         physics_apply_force(x,y,xspeed,0);
     }
-    else if (xdis &lt; -100){
+    else if (xdis &lt; -120){
+        canShoot = false;
         physics_apply_force(x,y,-xspeed,0);
     }
-    else 
+    else { 
+        canShoot = true;
+        if !alarm[2]
+            alarm[2] = 10;
+        
         physics_apply_force(x,y,0,5);
+    }
 }
 touch_ground = false;
 </string>
@@ -174,7 +218,15 @@ alarm[1] = 10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//gmdag;lg
+            <string>if distance_to_object(obj_beam) &lt;= 0
+    {
+    instance_destroy()
+    scoretext=instance_create(x,y,obj_scoretext)
+    with(scoretext)
+        {
+        scoreplus = 75
+        }
+    }
 </string>
           </argument>
         </arguments>
