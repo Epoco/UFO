@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>phy_rotation = 0
-physics_apply_force(x,y,0,-112.5)
+physics_apply_force(x,y,0,-163)
 
 if keyboard_check(ord('W'))
     physics_apply_force(x,y,0,-300)
@@ -168,7 +168,7 @@ draw_rectangle(x-45,y+10,x+45,y+150,0)
   <PhysicsShapePoints>
     <point>0,0</point>
     <point>90,0</point>
-    <point>90,25</point>
-    <point>0,25</point>
+    <point>90,36</point>
+    <point>0,36</point>
   </PhysicsShapePoints>
 </object>
