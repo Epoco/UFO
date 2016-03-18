@@ -8,4 +8,3 @@ physics_apply_force(x,y,0,pull)
 phy_speed_x = obj_ufo.phy_speed_x
 physics_apply_torque(spin)
         }
-        

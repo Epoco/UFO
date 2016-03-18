@@ -20,6 +20,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_beam.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="dudes">
       <object>objects\obj_soldier</object>
@@ -38,8 +41,11 @@
     <object>objects\obj_scoretext</object>
     <object>objects\object8</object>
     <object>objects\obj_bird</object>
+    <object>objects\obj_spawncontrol</object>
+    <object>objects\obj_spawner</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
