@@ -25,17 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>maxdudecount = 100
-dudecount = 0
-
-maxbirdcount = 50
-birdcount = 0
+            <string>alarm[0] = irandom_range(30,60)
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -52,25 +48,13 @@ birdcount = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-instance_activate_all();
-instance_deactivate_region(view_xview[0]-1000,view_yview[0]-1000,view_wview[0]+2000,view_hview[0]+2000,false,true);
-instance_activate_object(obj_ufo)     
-instance_activate_object(obj_control)   
-instance_activate_object(obj_beam)
-*/
-
-instance_deactivate_object(obj_spawner)
-instance_activate_region(view_xview[0] - 1000, view_yview - 1000, view_wview[0] + 2000, view_hview + 2000, true);
-    
-dudecount = instance_number(par_dudes)
-birdcount = instance_number(obj_bird)
-
-
-
-
-
-
+            <string>alarm[0] = irandom_range(30,60)
+if (obj_spawncontrol.birdcount &lt; obj_spawncontrol.maxbirdcount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2
+    {
+    inst = instance_create(x,irandom_range(y,y-50),obj_bird)
+    with(inst)
+        origspeed = 5
+    }
 </string>
           </argument>
         </arguments>

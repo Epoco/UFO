@@ -101,6 +101,8 @@
     <instance objName="obj_spawner" x="7522" y="4804" name="inst_5CC3D1B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="8136" y="4808" name="inst_D893AD6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="8746" y="4806" name="inst_5D0551EC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_birdspawner" x="302" y="5354" name="inst_6302EAFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_birdspawner" x="8672" y="4496" name="inst_AD30DC47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>

@@ -43,6 +43,7 @@
     <object>objects\obj_bird</object>
     <object>objects\obj_spawncontrol</object>
     <object>objects\obj_spawner</object>
+    <object>objects\obj_birdspawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

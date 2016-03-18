@@ -28,7 +28,12 @@
             <string>alarm[0] = 10
 bounce_time = irandom_range(20,25)
 dead = false;
-origSpeed = 0
+
+if phy_position_x - obj_ufo.phy_position_x  &gt; 0
+    origSpeed = -3
+else 
+    origSpeed = 3
+
 image_speed=0
 </string>
           </argument>
@@ -119,12 +124,14 @@ instance_destroy()
           <argument>
             <kind>1</kind>
             <string>///gdskmn
+if dead = true{
 inst = instance_create(x,y,obj_scoretext)
 with(inst)
 {
 scoreplus = 10
 }
 instance_destroy()
+}
 </string>
           </argument>
         </arguments>
