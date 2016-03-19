@@ -22,6 +22,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_beam.gml</script>
+    <script>scripts\scr_ufocollide.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="dudes">
