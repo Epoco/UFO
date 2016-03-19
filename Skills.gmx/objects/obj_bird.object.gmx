@@ -112,7 +112,7 @@ origSpeed = 0
         }
 if phy_position_y&lt; 0
 instance_destroy()
-
+/*
 if (php &lt; 0){
     inst = instance_create(x,y,obj_scoretext)
     with(inst)
@@ -144,6 +144,7 @@ if (php &lt; 0){
           <argument>
             <kind>1</kind>
             <string>scr_ufocollide(10,obj_ufo,100);
+dead = true
 </string>
           </argument>
         </arguments>
