@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>instance_create(x,y,obj_beam)
+
+shp = 100
+php = shp
 </string>
           </argument>
         </arguments>
@@ -48,7 +51,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_rotation = 0
+            <string>php = clamp(php,0,100);
+
+phy_rotation = 0
 physics_apply_force(x,y,0,-163)
 
 if keyboard_check(ord('W'))
@@ -117,7 +122,7 @@ with(inst)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//33
+            <string>scr_ufocollide(4,obj_ufo,50);
 </string>
           </argument>
         </arguments>
@@ -143,7 +148,8 @@ with(inst)
             <string>
 draw_set_alpha(1)
 draw_self()
-
+draw_text(x,y+20,php)
+draw_text(x-40,y+20,phy_speed);
 /*draw_set_alpha(0.5)
 draw_set_color(c_red)
 draw_rectangle(x-45,y+10,x+45,y+150,0)
