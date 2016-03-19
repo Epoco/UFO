@@ -139,6 +139,10 @@ phy_rotation = 0
             <string>if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
+    if phy_speed_y&gt;8 || phy_speed_x &gt; 8
+        dead = true
+    else
+        dead = false
 }
 
 if (touch_ground = true)
@@ -232,7 +236,7 @@ alarm[1] = 10
         scoreplus = 75
         }
     }
-scr_ufocollide(10,obj_ufo,100);
+
 </string>
           </argument>
         </arguments>

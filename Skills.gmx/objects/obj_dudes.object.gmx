@@ -162,7 +162,7 @@ if (php &lt; 0)
 if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
-    if phy_speed_y&gt;8
+    if phy_speed_y&gt;8 || phy_speed_x &gt; 3
         dead = true
     else
         dead = false
@@ -249,7 +249,7 @@ alarm[1] = 10
     {
     instance_destroy()
     }
-scr_ufocollide(10,obj_ufo,100);
+
 </string>
           </argument>
         </arguments>
