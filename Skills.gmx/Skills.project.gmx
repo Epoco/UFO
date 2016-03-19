@@ -17,6 +17,7 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_bullet2</sprite>
     <sprite>sprites\spr_tank</sprite>
+    <sprite>sprites\spr_bird2</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

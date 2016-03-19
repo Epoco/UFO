@@ -148,6 +148,11 @@ draw_self()
 draw_set_color(c_red)
 draw_rectangle(x-45,y+10,x+45,y+150,0)
 */
+
+if keyboard_check(ord('A'))
+    image_xscale = 1
+if keyboard_check(ord('D'))
+    image_xscale = -1
 </string>
           </argument>
         </arguments>

@@ -51,7 +51,7 @@
             <string>alarm[0] = irandom_range(30,60)
 if (obj_spawncontrol.birdcount &lt; obj_spawncontrol.maxbirdcount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2
     {
-    inst = instance_create(x,irandom_range(y,y-50),obj_bird)
+    inst = instance_create(choose(obj_ufo.phy_position_x-750,obj_ufo.phy_position_x+750),irandom_range(obj_ufo.phy_position_y,obj_ufo.phy_position_y-50),obj_bird)
     with(inst)
         origspeed = 5
     }
