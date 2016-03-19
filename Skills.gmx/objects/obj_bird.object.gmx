@@ -28,6 +28,8 @@
             <string>alarm[0] = 10
 bounce_time = irandom_range(20,25)
 dead = false;
+shp = 100;
+php = shp;
 
 if phy_position_x - obj_ufo.phy_position_x  &gt; 0
 {
@@ -41,6 +43,7 @@ else
     }
 
 image_speed=0.5
+
 </string>
           </argument>
         </arguments>
@@ -109,6 +112,38 @@ origSpeed = 0
         }
 if phy_position_y&lt; 0
 instance_destroy()
+
+if (php &lt; 0){
+    inst = instance_create(x,y,obj_scoretext)
+    with(inst)
+    {
+    scoreplus = 10
+}
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ufo">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_ufocollide(10,obj_ufo,100);
 </string>
           </argument>
         </arguments>

@@ -29,8 +29,11 @@
 jump = false
 moving  = false
 speedx =0
- dirx = 0
- dead = false
+dirx = 0
+dead = false
+
+shp = 100;
+php = shp;
 </string>
           </argument>
         </arguments>
@@ -152,6 +155,10 @@ phy_rotation = 0
           <argument>
             <kind>1</kind>
             <string>scr_beam(-10,0.5)
+
+if (php &lt; 0)
+    instance_destroy();
+
 if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
@@ -242,6 +249,7 @@ alarm[1] = 10
     {
     instance_destroy()
     }
+scr_ufocollide(10,obj_ufo,100);
 </string>
           </argument>
         </arguments>

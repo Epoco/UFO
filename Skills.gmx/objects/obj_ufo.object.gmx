@@ -122,7 +122,7 @@ with(inst)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_ufocollide(4,obj_ufo,50);
+            <string>//knwlds
 </string>
           </argument>
         </arguments>

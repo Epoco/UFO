@@ -29,6 +29,8 @@
 jump = false
 xspeed = 5;
 canShoot = false;
+shp = 100;
+php = 100;
 </string>
           </argument>
         </arguments>
@@ -167,6 +169,9 @@ if (touch_ground = true){
     }
 }
 touch_ground = false;
+
+if (php &lt; 0)
+    instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -227,6 +232,7 @@ alarm[1] = 10
         scoreplus = 75
         }
     }
+scr_ufocollide(10,obj_ufo,100);
 </string>
           </argument>
         </arguments>
