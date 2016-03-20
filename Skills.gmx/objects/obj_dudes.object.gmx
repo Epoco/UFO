@@ -250,6 +250,7 @@ alarm[1] = 10
     instance_destroy()
     }
 
+dead = true;
 </string>
           </argument>
         </arguments>
