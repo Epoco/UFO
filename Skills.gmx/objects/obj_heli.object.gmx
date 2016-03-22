@@ -26,10 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>touch_ground = false;
-jump = false
-xspeed = 5;
-yspeed= 40;
+
+xspeed = 15;
+yspeed= 15;
+
 canShoot = false;
+inDIST = false;
+tally = 0;
+
 shp = 100;
 php = 100;
 dead= false;
@@ -66,6 +70,29 @@ dead= false;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>tally = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -84,40 +111,18 @@ dead= false;
           <argument>
             <kind>1</kind>
             <string>bullet = instance_create(x,y,obj_bullet);
+tally += 1;
 
 with(bullet){
     ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
-    xx = lengthdir_x(100,ufoPos);
-    yy = lengthdir_y(100,ufoPos);
+    xx = lengthdir_x(10000000,ufoPos);
+    yy = lengthdir_y(10000000,ufoPos);
     physics_apply_impulse(x,y,xx,yy);
 }
 
-if (canShoot = true){
-    alarm[2] = 60;
+if (canShoot = true) &amp;&amp; tally &lt; 6{
+    alarm[2] = 5;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>jump = false
 </string>
           </argument>
         </arguments>
@@ -164,7 +169,8 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>phy_rotation = clamp(phy_speed_x,-40,40)
+            <string>//Rotation
+phy_rotation = clamp(phy_speed_x,-40,40)
 
 if (touch_ground = false) 
 {   
@@ -173,38 +179,57 @@ if (touch_ground = false)
     else
         phy_fixed_rotation = false;  
 }
-   
-xspeed = clamp(xspeed,0,5);
+
+//Horizontal Movement   
+phy_speed_x = clamp(phy_speed_x,-120,120);
 xdis = (obj_ufo.phy_position_x - phy_position_x);
 
-if (xdis &gt; 150){
-    canShoot = false;
-    physics_apply_force(x,y,xspeed,0);
+if (xdis &gt; 300) &amp;&amp; (xdis &lt; 1000){
+    physics_apply_force(x,y,xspeed,0); 
 }
-
-else if (xdis &lt; -150){
-    canShoot = false;
+else if (xdis &lt; -300) &amp;&amp; (xdis &gt; - 1000){
     physics_apply_force(x,y,-xspeed,0);
+    
 }
 
-else { 
-    canShoot = true;
+//Shooting
+if (xdis &lt; - 1000) || (xdis &gt; 1000)
+    inDIST = false;
+else
+    inDIST = true;
+    
+if (inDIST == true) &amp;&amp; (dead == false)
+    canShoot = true;   
+
+if (canShoot = true) &amp;&amp; tally &lt; 6 {
     if !alarm[2]
-        alarm[2] = 10;
-    }
+        alarm[2] = 10;         
+}
 
+if (tally &gt; 5){
+    if !alarm[3]
+        alarm [3] = 60;
+}
+//Vertical Movement
 ydis = (obj_ufo.phy_position_y - phy_position_y)
-yspeed = clamp(yspeed,0,40);
+phy_speed_y = clamp(phy_speed_y,-20,20);
 
-if (ydis &lt; -120) &amp;&amp; (dead == false){
+if (ydis &lt; -700){
     canShoot = false;
+    physics_apply_force(x,y,0,-5.76)
+}
+
+else if (ydis &lt; 0) &amp;&amp; (dead == false){
+    inDIST = true;
     physics_apply_force(x,y,0,-yspeed)
 }
+
+//Death
 if dead = true
     {
-    physics_apply_force(x,y,0,7);    
+    physics_apply_force(x,y,0,7);   
+    canShoot = false; 
 }
-
 
 if (php &lt; 0)
     instance_destroy();
@@ -296,6 +321,29 @@ instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="par_dudes">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//fgdf
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -315,6 +363,10 @@ instance_destroy();
             <kind>1</kind>
             <string>draw_self()
 draw_set_colour(c_black)
+draw_text(x,y+10,phy_speed_y);
+draw_text(x,y+25,ydis);
+draw_text(x,y+40,xdis);
+draw_text(x,y+55,tally);
 //draw_text(x,y-20,phy_rotation)
 </string>
           </argument>

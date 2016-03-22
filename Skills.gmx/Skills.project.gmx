@@ -36,6 +36,7 @@
       <object>objects\par_dudes</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet2</object>
+      <object>objects\obj_bird</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_control</object>
@@ -45,7 +46,6 @@
     <object>objects\obj_camera</object>
     <object>objects\obj_scoretext</object>
     <object>objects\object8</object>
-    <object>objects\obj_bird</object>
     <object>objects\obj_spawncontrol</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_birdspawner</object>
