@@ -3,7 +3,7 @@
   <spriteName>spr_beam</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>2</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed =0.5
+floorlevel = 0
 </string>
           </argument>
         </arguments>
@@ -48,8 +49,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(vk_space)
+            <string>if place_meeting(x,y,obj_floor) and locked = false
+{
+floorlevel = y
+locked = true
+}
+else
+{
+locked = false
+floorlevel = 0
+}
+
+
+if keyboard_check(vk_space)
     {
+    for (xx = 0;xx&lt;=15;xx++)
+    part_particles_create(obj_particle_control.Sname, x, y+xx*7.5+20,  obj_particle_control.particle1, 2);
     x = obj_ufo.x
     y = obj_ufo.y +12.5
     }
@@ -81,7 +96,11 @@ else
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_self()
+            <string>image_alpha = 0
+draw_self()
+
+draw_set_alpha(1)
+draw_text(x+50,y+50,floorlevel)
 </string>
           </argument>
         </arguments>
