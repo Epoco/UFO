@@ -60,6 +60,12 @@ instance_activate_object(obj_control)
 instance_activate_object(obj_beam)
 */
 
+with(par_dudes)
+    {
+    if distance_to_object(obj_ufo) &gt; 3000
+        instance_destroy()
+    }
+
 instance_deactivate_object(obj_spawner)
 instance_activate_region(view_xview[0] - 1000, view_yview - 1000, view_wview[0] + 2000, view_hview + 2000, true);
     

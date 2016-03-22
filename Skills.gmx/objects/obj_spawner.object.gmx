@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = irandom_range(30,60)
+            <string>alarm[0] = irandom_range(10,30)
 
 </string>
           </argument>
@@ -49,7 +49,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = irandom_range(30,60)
+            <string>alarm[0] = irandom_range(10,30)
 if (obj_spawncontrol.dudecount &lt; obj_spawncontrol.maxdudecount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2
     {
     instance_create(x,y,obj_dudes)
