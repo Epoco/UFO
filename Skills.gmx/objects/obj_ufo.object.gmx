@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>instance_create(x,y,obj_beam)
-
+image_speed = 0.5
 canDMG = true;
 shp = 100
 php = shp

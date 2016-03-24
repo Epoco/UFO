@@ -70,7 +70,7 @@ image_speed=0.5
 
 if dead = false
 {
-alarm[0] = 20
+alarm[0] = 40
 physics_apply_impulse(x,y,0,-2.60)
 }
 </string>

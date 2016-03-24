@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>alarm[0] = 5
 img = 0
+room_speed = 60
 </string>
           </argument>
         </arguments>
