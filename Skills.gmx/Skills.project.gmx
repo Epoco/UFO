@@ -21,12 +21,14 @@
     <sprite>sprites\spr_bird2</sprite>
     <sprite>sprites\bg_temp</sprite>
     <sprite>sprites\sprite14</sprite>
+    <sprite>sprites\spr_bomb</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_beam.gml</script>
     <script>scripts\scr_ufocollide.gml</script>
+    <script>scripts\isTouchingBeam.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="dudes">
@@ -51,6 +53,8 @@
     <object>objects\obj_spawner</object>
     <object>objects\obj_birdspawner</object>
     <object>objects\obj_particle_control</object>
+    <object>objects\obj_bomb</object>
+    <object>objects\par_floor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>

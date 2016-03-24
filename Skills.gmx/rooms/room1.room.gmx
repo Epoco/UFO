@@ -71,12 +71,6 @@
     <instance objName="obj_floor" x="1722" y="5662" name="inst_DB4388F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="1786" y="5634" name="inst_F94962DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dudes" x="602" y="5706" name="inst_017D00B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dudes" x="708" y="5760" name="inst_EBC4CF76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dudes" x="804" y="5752" name="inst_14F831AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dudes" x="926" y="5746" name="inst_DC24966A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dudes" x="948" y="5808" name="inst_60CCF278" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dudes" x="1070" y="5770" name="inst_4F2E80DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_dudes" x="1104" y="5704" name="inst_871CA346" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dudes" x="1176" y="5750" name="inst_92133CF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dudes" x="1408" y="5690" name="inst_D61B4C6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_dudes" x="1518" y="5648" name="inst_C7F0F3CE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -104,6 +98,7 @@
     <instance objName="obj_birdspawner" x="302" y="5354" name="inst_6302EAFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_heli" x="1196" y="5542" name="inst_51EC83AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_particle_control" x="48" y="0" name="inst_CF4ECA14" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bomb" x="868" y="5688" name="inst_8BFC64F7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>-1</PhysicsWorld>
