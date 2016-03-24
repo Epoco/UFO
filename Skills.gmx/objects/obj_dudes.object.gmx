@@ -183,7 +183,7 @@ if moving = false
 {
 dirx = choose(-1,1)
 steps = irandom_range(30,60)
-speedx = choose(1,1.5)
+speedx = choose(0.5,0.75)
 moving = true
 alarm[2] = steps
 }
