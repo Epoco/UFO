@@ -29,6 +29,7 @@
     <script>scripts\scr_beam.gml</script>
     <script>scripts\scr_ufocollide.gml</script>
     <script>scripts\isTouchingBeam.gml</script>
+    <script>scripts\scr_tracking.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="dudes">
@@ -39,20 +40,24 @@
       <object>objects\par_dudes</object>
       <object>objects\obj_bullet</object>
       <object>objects\obj_bullet2</object>
+      <object>objects\obj_trackingbullet</object>
       <object>objects\obj_bird</object>
+    </objects>
+    <objects name="Controls">
+      <object>objects\obj_spawncontrol</object>
+      <object>objects\obj_spawner</object>
+      <object>objects\obj_birdspawner</object>
+      <object>objects\obj_camera</object>
+      <object>objects\obj_particle_control</object>
+      <object>objects\obj_grid</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_control</object>
     <object>objects\obj_ufo</object>
     <object>objects\obj_beam</object>
     <object>objects\obj_tri</object>
-    <object>objects\obj_camera</object>
     <object>objects\obj_scoretext</object>
     <object>objects\object8</object>
-    <object>objects\obj_spawncontrol</object>
-    <object>objects\obj_spawner</object>
-    <object>objects\obj_birdspawner</object>
-    <object>objects\obj_particle_control</object>
     <object>objects\obj_bomb</object>
     <object>objects\par_floor</object>
   </objects>
