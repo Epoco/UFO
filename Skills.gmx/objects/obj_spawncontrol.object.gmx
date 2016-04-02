@@ -28,7 +28,7 @@
             <string>maxdudecount = 100
 dudecount = 0
 
-maxbirdcount = 50
+maxbirdcount = 10
 birdcount = 0
 </string>
           </argument>

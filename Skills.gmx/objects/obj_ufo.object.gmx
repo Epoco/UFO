@@ -84,6 +84,7 @@ if keyboard_check(ord('W'))
     physics_apply_force(x,y,0,-300)
 if keyboard_check(ord('S'))
     physics_apply_force(x,y,0,200)
+
 if keyboard_check(ord('A'))
     physics_apply_force(x,y,-200,0)
 if keyboard_check(ord('D'))
@@ -91,6 +92,12 @@ if keyboard_check(ord('D'))
     
 phy_rotation = clamp(phy_speed_x,-40,40)
 
+if keyboard_check(ord('P'))
+    { 
+        bomb = instance_create(x,y+50,obj_bomb)
+        with(bomb)
+            on = true;
+            }
 /*
 inst = (collision_rectangle(x-45,y+10,x+45,y+150,obj_dudes,1,1))
 with(inst)
@@ -169,7 +176,7 @@ with(inst)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if canDMG{
+            <string>/*if canDMG{
     scr_ufocollide(0.5,obj_ufo,2);
     canDMG = false;
     alarm[0] = 30;

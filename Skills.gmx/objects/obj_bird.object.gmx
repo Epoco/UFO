@@ -33,12 +33,12 @@ php = shp;
 
 if phy_position_x - obj_ufo.phy_position_x  &gt; 0
 {
-    origSpeed = -3
+    origSpeed = -1.5
     image_xscale = 1
     }
 else 
 {
-    origSpeed = 3
+    origSpeed = 1.5
     image_xscale = -1
     }
 
@@ -148,7 +148,8 @@ if (php &lt; 0){
             <kind>1</kind>
             <string>scr_ufocollide(10,obj_ufo,100);
 dead = true
-physics_apply_torque(25);
+if dead == false
+    physics_apply_torque(5);
 </string>
           </argument>
         </arguments>
@@ -217,7 +218,7 @@ instance_destroy()
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
-  <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
+  <PhysicsObjectAngularDamping>0.5</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
