@@ -307,7 +307,7 @@ draw_set_colour(c_black)
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>0.850000023841858</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.0599999986588955</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>
@@ -317,8 +317,8 @@ draw_set_colour(c_black)
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>0,0</point>
-    <point>20,0</point>
-    <point>20,14</point>
-    <point>0,14</point>
+    <point>80,0</point>
+    <point>80,40</point>
+    <point>0,40</point>
   </PhysicsShapePoints>
 </object>
