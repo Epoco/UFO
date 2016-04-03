@@ -177,6 +177,8 @@ if level_up = true and alarm[2] &lt;=0
     alarm[2] = 90
     level_up = false    
 }
+
+
 </string>
           </argument>
         </arguments>
