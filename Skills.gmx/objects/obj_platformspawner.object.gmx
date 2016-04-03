@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>alarm[0] = 50
 
-chanceheli = 1
-chancerpg = 1
+chanceheli = 2
+chancerpg = 2
 </string>
           </argument>
         </arguments>
@@ -56,11 +56,11 @@ if (obj_spawncontrol.dudecount &lt; obj_spawncontrol.maxdudecount) &amp;&amp; di
     {
     rnd = random(100)
         if rnd &lt;= chanceheli
-            instance_create(x,y,obj_heli)
+            instance_create(x+irandom_range(-100,100),y,obj_heli)
             
     rnd = random(100)
         if rnd &lt;= chancerpg
-            instance_create(x,y,obj_rpgsol)
+            instance_create(x+irandom_range(-100,100),y,obj_rpgsol)
             
   
     

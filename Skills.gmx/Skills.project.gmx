@@ -15,6 +15,7 @@
     <sprite>sprites\spr_rpgsol</sprite>
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_ufo</sprite>
+    <sprite>sprites\spr_defcon2</sprite>
     <sprite>sprites\spr_beam</sprite>
     <sprite>sprites\spr_tri</sprite>
     <sprite>sprites\spr_ramp2</sprite>
@@ -35,7 +36,7 @@
     <sprite>sprites\spr_btnSTART</sprite>
     <sprite>sprites\spr_TITLE</sprite>
     <sprite>sprites\spr_healthBorder</sprite>
-    <sprite>sprites\spr_barrel</sprite>
+    <sprite>sprites\spr_slider</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>
@@ -60,7 +61,6 @@
       <object>objects\obj_rpgsol</object>
       <object>objects\obj_heli</object>
       <object>objects\obj_tank</object>
-      <object>objects\obj_barrel</object>
       <object>objects\obj_policecar</object>
       <object>objects\obj_dudes</object>
       <object>objects\obj_bear</object>
