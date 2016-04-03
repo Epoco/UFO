@@ -218,7 +218,7 @@ if keyboard_check(ord('A'))
 if keyboard_check(ord('D'))
     image_xscale = -1
     
-image_speed = phy_speed_x*0.1
+//image_speed = phy_speed_x*0.1+sign(phy_speed_x)*0.2
 </string>
           </argument>
         </arguments>

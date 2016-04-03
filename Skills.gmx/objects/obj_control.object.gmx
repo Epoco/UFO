@@ -189,7 +189,7 @@ if level_up = true and alarm[2] &lt;=0
 {
 for(yy = 0;yy&lt;30;yy++)
 {
- draw_sprite(bg_temp,img,xx*300,yy*300)
+ draw_sprite(bg_temp,img,xx*300+view_xview[0]*0.5,yy*300+view_yview[0]*0.5)
 }
 }
 // Stats //
