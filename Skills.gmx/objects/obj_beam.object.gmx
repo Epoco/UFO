@@ -100,7 +100,7 @@ else
 draw_self()
 
 draw_set_alpha(1)
-draw_text(x+50,y+50,floorlevel)
+//draw_text(x+50,y+50,floorlevel)
 </string>
           </argument>
         </arguments>
