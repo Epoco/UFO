@@ -72,6 +72,7 @@
       <object>objects\obj_particle_control</object>
       <object>objects\obj_control</object>
       <object>objects\obj_grid</object>
+      <object>objects\obj_bgMain</object>
     </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_dudefloor</object>
