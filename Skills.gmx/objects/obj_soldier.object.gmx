@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>touch_ground = false;
 jump = false
-xspeed = 5;
+xspeed = 50;
 canShoot = false;
 shp = 100;
 php = 100;
@@ -54,14 +54,17 @@ php = 100;
           <argument>
             <kind>1</kind>
             <string>if (touch_ground == true)
+    {
     bullet = instance_create(x,y,obj_bullet);
 
-with(bullet){
-    ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
-    xx = lengthdir_x(100,ufoPos);
-    yy = lengthdir_y(100,ufoPos);
-    physics_apply_impulse(x,y,xx,yy);
-}
+    with(bullet)
+        {
+        ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
+        xx = lengthdir_x(100,ufoPos);
+        yy = lengthdir_y(100,ufoPos);
+        //physics_apply_impulse(x,y,xx,yy);
+        }
+    }
 
 if (canShoot = true){
     alarm[2] = 120;

@@ -54,14 +54,16 @@ php = 100;
           <argument>
             <kind>1</kind>
             <string>if (touch_ground == true)
+    {
     bullet = instance_create(x,y,obj_bullet2);
 
-with(bullet){
-    ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
-    xx = lengthdir_x(50,ufoPos);
-    yy = lengthdir_y(50,ufoPos);
-    physics_apply_impulse(x,y,xx,yy);
-}
+    with(bullet){
+        ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
+        xx = lengthdir_x(10,ufoPos);
+        yy = lengthdir_y(10,ufoPos);
+        physics_apply_impulse(x,y,xx,yy);
+        }
+    }
 
 if (canShoot = true){
     alarm[2] = 250;
