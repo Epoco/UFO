@@ -25,6 +25,7 @@
     <sprite>sprites\sprite14</sprite>
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_rock</sprite>
+    <sprite>sprites\spr_LevelUp</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
