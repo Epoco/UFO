@@ -132,7 +132,9 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (touch_ground = false)
+            <string>scr_beam(-30,0.5)
+
+if (touch_ground = false)
 {
     phy_fixed_rotation = false;
 }

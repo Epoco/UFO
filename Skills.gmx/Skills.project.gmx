@@ -19,6 +19,7 @@
     <sprite>sprites\spr_bullet</sprite>
     <sprite>sprites\spr_bullet2</sprite>
     <sprite>sprites\spr_tank</sprite>
+    <sprite>sprites\spr_policecar</sprite>
     <sprite>sprites\spr_heli</sprite>
     <sprite>sprites\spr_bird2</sprite>
     <sprite>sprites\bg_temp</sprite>
@@ -49,6 +50,7 @@
       <object>objects\obj_rpgsol</object>
       <object>objects\obj_heli</object>
       <object>objects\obj_tank</object>
+      <object>objects\obj_policecar</object>
       <object>objects\obj_dudes</object>
       <object>objects\obj_bear</object>
       <object>objects\par_dudes</object>
