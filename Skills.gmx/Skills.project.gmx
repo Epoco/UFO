@@ -27,7 +27,11 @@
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_LevelUp</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_floors</background>
+    <background>background\bg_buildings</background>
+    <background>background\bg_dirt</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_beam.gml</script>
