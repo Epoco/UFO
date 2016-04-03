@@ -25,12 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = irandom_range(10,30)
-chancesoldier = 2
-chancerpgsoldier = 2
-chancetank = 1
-chancepolicecar = 1
+            <string>alarm[0] = 50
 
+chanceheli = 1
+chancerpg = 1
 </string>
           </argument>
         </arguments>
@@ -53,22 +51,20 @@ chancepolicecar = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = irandom_range(10,30)
+            <string>alarm[0] = irandom_range(50,100)
 if (obj_spawncontrol.dudecount &lt; obj_spawncontrol.maxdudecount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2
     {
     rnd = random(100)
-        if rnd &lt;= chancesoldier
-            instance_create(x,y,obj_soldier)
+        if rnd &lt;= chanceheli
+            instance_create(x,y,obj_heli)
             
     rnd = random(100)
-        if rnd &lt;= chancerpgsoldier
+        if rnd &lt;= chancerpg
             instance_create(x,y,obj_rpgsol)
             
-    rnd = random(100)
-        if rnd &lt;= chancetank
-            instance_create(x,y,obj_tank)
+  
     
-    instance_create(x,y,obj_dudes)
+    
     }
 </string>
           </argument>

@@ -30,6 +30,9 @@ dudecount = 0
 
 maxbirdcount = 10
 birdcount = 0
+
+
+
 </string>
           </argument>
         </arguments>
@@ -67,6 +70,7 @@ with(par_dudes)
     }
 
 instance_deactivate_object(obj_spawner)
+instance_deactivate_object(obj_platformspawner)
 instance_activate_region(view_xview[0] - 1000, view_yview - 1000, view_wview[0] + 2000, view_hview + 2000, true);
     
 dudecount = instance_number(par_dudes)
