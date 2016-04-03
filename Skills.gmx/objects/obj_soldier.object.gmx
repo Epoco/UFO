@@ -53,18 +53,19 @@ php = 100;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (touch_ground == true)
+            <string>if (touch_ground == true){
     bullet = instance_create(x,y,obj_bullet);
 
-with(bullet){
-    ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
-    xx = lengthdir_x(100,ufoPos);
-    yy = lengthdir_y(100,ufoPos);
-    physics_apply_impulse(x,y,xx,yy);
-}
+    with(bullet){
+        ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
+        xx = lengthdir_x(100,ufoPos);
+        yy = lengthdir_y(100,ufoPos);
+        physics_apply_impulse(x,y,xx,yy);
+    }
 
 if (canShoot = true){
     alarm[2] = 120;
+}
 }
 </string>
           </argument>
@@ -135,7 +136,7 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_beam(-10,0.5)
+            <string>scr_beam(-20,0.5)
 if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
