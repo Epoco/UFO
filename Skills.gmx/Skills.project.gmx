@@ -14,6 +14,7 @@
     <sprite>sprites\spr_ufo</sprite>
     <sprite>sprites\spr_beam</sprite>
     <sprite>sprites\spr_tri</sprite>
+    <sprite>sprites\spr_ramp2</sprite>
     <sprite>sprites\spr_car</sprite>
     <sprite>sprites\spr_bird</sprite>
     <sprite>sprites\spr_bullet</sprite>
@@ -27,6 +28,9 @@
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_LevelUp</sprite>
+    <sprite>sprites\spr_btnHelp</sprite>
+    <sprite>sprites\spr_btnSTART</sprite>
+    <sprite>sprites\spr_TITLE</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>
@@ -70,15 +74,24 @@
       <object>objects\obj_grid</object>
     </objects>
     <object>objects\obj_floor</object>
+    <object>objects\obj_dudefloor</object>
     <object>objects\obj_ufo</object>
     <object>objects\obj_beam</object>
     <object>objects\obj_tri</object>
+    <object>objects\obj_tri2</object>
     <object>objects\obj_scoretext</object>
     <object>objects\object8</object>
     <object>objects\obj_bomb</object>
     <object>objects\par_floor</object>
+    <objects name="start menu">
+      <object>objects\obj_btnStart</object>
+      <object>objects\obj_btnHelp</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_startcontrol</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>
