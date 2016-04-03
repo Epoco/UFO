@@ -14,6 +14,7 @@
     <sprite>sprites\spr_ufo</sprite>
     <sprite>sprites\spr_beam</sprite>
     <sprite>sprites\spr_tri</sprite>
+    <sprite>sprites\spr_ramp2</sprite>
     <sprite>sprites\spr_car</sprite>
     <sprite>sprites\spr_bird</sprite>
     <sprite>sprites\spr_bullet</sprite>
@@ -70,9 +71,11 @@
       <object>objects\obj_grid</object>
     </objects>
     <object>objects\obj_floor</object>
+    <object>objects\obj_dudefloor</object>
     <object>objects\obj_ufo</object>
     <object>objects\obj_beam</object>
     <object>objects\obj_tri</object>
+    <object>objects\obj_tri2</object>
     <object>objects\obj_scoretext</object>
     <object>objects\object8</object>
     <object>objects\obj_bomb</object>
