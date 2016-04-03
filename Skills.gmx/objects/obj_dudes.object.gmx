@@ -31,8 +31,17 @@ moving  = false
 speedx =0
 dirx = 0
 dead = false
+//Randomizing Sprites
+choice = choose(1,2)
 
-i1 = choose(0,4,8,12);
+if (choice == 1)
+    i1 = choose(0,4,8,12);
+
+else if choice == 2{
+    sprite_index = spr_dudeb;
+    i1 = 0;
+}    
+
 i2 = i1 + 3;
 image_index = i1
 
@@ -159,8 +168,8 @@ phy_rotation = 0
           <argument>
             <kind>1</kind>
             <string>scr_beam(-10,0.5)
-
-if (image_index == i2)
+//Animation
+if (image_index == i2) 
     image_index = i1;
 
 if (phy_speed_x &gt; 0) || (phy_speed_x &lt; 0){
@@ -172,7 +181,7 @@ else
 image_xscale = sign(phy_speed_x)
     if image_xscale = 0
         image_xscale = 1
-        
+//Death       
 if (php &lt; 0)
     instance_destroy();
 
@@ -184,7 +193,7 @@ if (touch_ground = false) and jump == false
     else
         dead = false
 }
-
+//Movement
 if (touch_ground = true)
 {
 

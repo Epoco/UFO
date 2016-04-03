@@ -271,15 +271,7 @@ alarm[1] = 10
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_beam) &lt;= 0
-    {
-    instance_destroy()
-    scoretext=instance_create(x,y,obj_scoretext)
-    with(scoretext)
-        {
-        scoreplus = 100
-        }
-    }
+            <string>//sd;knaksjdn
 </string>
           </argument>
         </arguments>

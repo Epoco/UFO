@@ -10,6 +10,7 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\dudes</sprite>
+    <sprite>sprites\spr_dudeb</sprite>
     <sprite>sprites\spr_bear</sprite>
     <sprite>sprites\spr_soldier</sprite>
     <sprite>sprites\spr_rpgsol</sprite>
