@@ -28,6 +28,9 @@
     <sprite>sprites\spr_bomb</sprite>
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_LevelUp</sprite>
+    <sprite>sprites\spr_btnHelp</sprite>
+    <sprite>sprites\spr_btnSTART</sprite>
+    <sprite>sprites\spr_TITLE</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>
@@ -80,8 +83,15 @@
     <object>objects\object8</object>
     <object>objects\obj_bomb</object>
     <object>objects\par_floor</object>
+    <objects name="start menu">
+      <object>objects\obj_btnStart</object>
+      <object>objects\obj_btnHelp</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_startcontrol</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
     <room>rooms\room1</room>
     <room>rooms\room0</room>
   </rooms>

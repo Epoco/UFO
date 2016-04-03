@@ -389,8 +389,6 @@ dead = true;
             <kind>1</kind>
             <string>draw_self()
 draw_set_colour(c_black)
-draw_text(x,y-30,xdis);
-draw_text(x,y-45,insnear);
 //draw_text(x,y-20,phy_rotation)
 draw_self()
 //draw_text(x,y,phy_speed_y)
