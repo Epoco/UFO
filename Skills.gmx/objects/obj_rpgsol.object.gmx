@@ -160,7 +160,7 @@ if (touch_ground = true){
         if !alarm[2]
             alarm[2] = 10;
         
-        physics_apply_force(x,y,0,5);
+        //physics_apply_force(x,y,0,5);
     }
     
 touch_ground = false;
