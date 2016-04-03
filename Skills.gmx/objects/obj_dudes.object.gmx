@@ -36,7 +36,6 @@ i1 = choose(0,4,8,12);
 i2 = i1 + 3;
 image_index = i1
 
-
 shp = 100;
 php = shp;
 </string>
@@ -163,6 +162,7 @@ phy_rotation = 0
 
 if (image_index == i2)
     image_index = i1;
+
 if (phy_speed_x &gt; 0) || (phy_speed_x &lt; 0){
     image_speed = 0.2
 }

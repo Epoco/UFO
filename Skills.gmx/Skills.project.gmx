@@ -62,7 +62,9 @@
       <object>objects\obj_rpgsol</object>
       <object>objects\obj_heli</object>
       <object>objects\obj_tank</object>
-      <object>objects\obj_policecar</object>
+      <object>objects\obj_barrel</object>
+      <object>objects\obj_policepick</object>
+      <object>objects\obj_policenonpick</object>
       <object>objects\obj_dudes</object>
       <object>objects\obj_bear</object>
       <object>objects\par_dudes</object>
@@ -83,6 +85,12 @@
       <object>objects\obj_bgMain</object>
       <object>objects\obj_platformspawner</object>
     </objects>
+    <objects name="start menu">
+      <object>objects\obj_btnStart</object>
+      <object>objects\obj_btnHelp</object>
+      <object>objects\obj_title</object>
+      <object>objects\obj_startcontrol</object>
+    </objects>
     <object>objects\obj_floor</object>
     <object>objects\obj_dudefloor</object>
     <object>objects\obj_ufo</object>
@@ -93,13 +101,6 @@
     <object>objects\object8</object>
     <object>objects\obj_bomb</object>
     <object>objects\par_floor</object>
-    <objects name="start menu">
-      <object>objects\obj_btnStart</object>
-      <object>objects\obj_btnHelp</object>
-      <object>objects\obj_title</object>
-      <object>objects\obj_startcontrol</object>
-    </objects>
-    <object>objects\obj_barrel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
