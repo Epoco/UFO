@@ -78,19 +78,19 @@ php = shp
             <string>php = clamp(php,0,100);
 
 phy_rotation = 0
-physics_apply_force(x,y,0,-163)
+physics_apply_force(x,y,0,-210)
 
 if keyboard_check(ord('W'))
-    physics_apply_force(x,y,0,-300)
+    physics_apply_force(x,y,0,-400)
 if keyboard_check(ord('S'))
-    physics_apply_force(x,y,0,200)
+    physics_apply_force(x,y,0,400)
 
 if keyboard_check(ord('A'))
-    physics_apply_force(x,y,-200,0)
+    physics_apply_force(x,y,-400,0)
 if keyboard_check(ord('D'))
-    physics_apply_force(x,y,200,0)
+    physics_apply_force(x,y,400,0)
     
-phy_rotation = clamp(phy_speed_x,-40,40)
+phy_rotation = clamp(phy_speed_x*1.2,-40,40)
 
 if keyboard_check(ord('P'))
     { 
@@ -108,6 +108,29 @@ with(inst)
 */
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_tri2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//
 </string>
           </argument>
         </arguments>
