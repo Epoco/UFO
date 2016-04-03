@@ -31,6 +31,7 @@
     <sprite>sprites\spr_btnHelp</sprite>
     <sprite>sprites\spr_btnSTART</sprite>
     <sprite>sprites\spr_TITLE</sprite>
+    <sprite>sprites\spr_healthBorder</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>
@@ -44,6 +45,7 @@
     <script>scripts\isTouchingBeam.gml</script>
     <script>scripts\scr_tracking.gml</script>
     <script>scripts\scr_abduction.gml</script>
+    <script>scripts\scr_dmg.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_cool</font>
