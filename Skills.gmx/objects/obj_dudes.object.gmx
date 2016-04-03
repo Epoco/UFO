@@ -162,7 +162,7 @@ if (php &lt; 0)
 if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
-    if phy_speed_y&gt;8 || phy_speed_x &gt; 3
+    if phy_speed_y&gt;8 
         dead = true
     else
         dead = false
@@ -248,9 +248,10 @@ alarm[1] = 10
             <string>if distance_to_object(obj_beam) &lt;= 0
     {
     instance_destroy()
+    dead = true;
     }
 
-dead = true;
+
 </string>
           </argument>
         </arguments>
@@ -313,7 +314,7 @@ draw_self()
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.300000011920929</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>

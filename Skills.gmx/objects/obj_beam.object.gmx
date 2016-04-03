@@ -70,8 +70,8 @@ if keyboard_check(vk_space)
     }
 else
     {
-    x = -1000
-    y = -1000
+    x = -10000
+    y = -10000
     }
     
 </string>
