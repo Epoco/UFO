@@ -37,6 +37,7 @@
     <sprite>sprites\spr_TITLE</sprite>
     <sprite>sprites\spr_healthBorder</sprite>
     <sprite>sprites\spr_slider</sprite>
+    <sprite>sprites\spr_barrel</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>
@@ -98,6 +99,7 @@
       <object>objects\obj_title</object>
       <object>objects\obj_startcontrol</object>
     </objects>
+    <object>objects\obj_barrel</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
