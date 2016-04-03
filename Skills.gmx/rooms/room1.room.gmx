@@ -91,6 +91,8 @@
     <instance objName="obj_tri" x="1120" y="6592" name="inst_7FD777C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tri" x="1152" y="6560" name="inst_C9E5E584" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tri" x="1184" y="6528" name="inst_69063075" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_policecar" x="320" y="6432" name="inst_24689CF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_heli" x="736" y="5664" name="inst_1859FED4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_floors" x="256" y="6592" w="32" h="32" xo="128" yo="320" id="10000092" name="inst_614B7D01" depth="11" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

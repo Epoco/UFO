@@ -54,8 +54,7 @@ php = 100;
           <argument>
             <kind>1</kind>
             <string>if (touch_ground == true)
-    if (xdis &lt; 120 &amp;&amp; xdis &gt; -120)
-        bullet = instance_create(x,y,obj_bullet);
+    bullet = instance_create(x,y,obj_bullet);
 
 with(bullet){
     ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
@@ -154,7 +153,7 @@ if (phy_rotation &gt;= 10 or phy_rotation &lt;= -10)  and alarm[0] &lt;= 0
 }
 
 xdis = (obj_ufo.phy_position_x - phy_position_x);
-phy_speed_x = clamp(phy_speed_x,-5,5);
+phy_speed_x = clamp(phy_speed_x,-3,3);
 
 if (touch_ground = true){
     if (xdis &gt; 120 ){
@@ -267,6 +266,29 @@ alarm[1] = 10
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_soldier">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//fgdhd
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -296,7 +318,7 @@ draw_set_colour(c_black)
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.699999988079071</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>0.100000001490116</PhysicsObjectLinearDamping>

@@ -98,7 +98,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (phy_speed&gt;0.1){
+            <string>if (phy_speed&gt;1){
     with (other){
         instance_destroy();
     }

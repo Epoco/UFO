@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>touch_ground = false;
 
-xspeed = 15;
-yspeed= 15;
+xspeed = 40;
+yspeed= 40;
 
 canShoot = false;
 inDIST = false;
@@ -170,7 +170,7 @@ phy_rotation = 0
           <argument>
             <kind>1</kind>
             <string>//Rotation
-phy_rotation = clamp(phy_speed_x,-40,40)
+phy_rotation = clamp(phy_speed_x,-60,60)
 
 if (touch_ground = false) 
 {   
@@ -181,14 +181,21 @@ if (touch_ground = false)
 }
 
 //Horizontal Movement   
-phy_speed_x = clamp(phy_speed_x,-120,120);
+phy_speed_x = clamp(phy_speed_x,-150,150);
 xdis = (obj_ufo.phy_position_x - phy_position_x);
 
+if !dead{
+    image_xscale = sign(phy_speed_x)
+    if image_xscale = 0
+        image_xscale = 1
+}
 if (xdis &gt; 300) &amp;&amp; (xdis &lt; 1000){
     physics_apply_force(x,y,xspeed,0); 
+    
 }
 else if (xdis &lt; -300) &amp;&amp; (xdis &gt; - 1000){
     physics_apply_force(x,y,-xspeed,0);
+    
     
 }
 
@@ -212,11 +219,11 @@ if (tally &gt; 5){
 }
 //Vertical Movement
 ydis = (obj_ufo.phy_position_y - phy_position_y)
-phy_speed_y = clamp(phy_speed_y,-20,20);
+phy_speed_y = clamp(phy_speed_y,-50,50);
 
 if (ydis &lt; -700){
     canShoot = false;
-    physics_apply_force(x,y,0,-5.76)
+    physics_apply_force(x,y,0,-40.76)
 }
 
 else if (ydis &lt; 0) &amp;&amp; (dead == false){
@@ -227,13 +234,12 @@ else if (ydis &lt; 0) &amp;&amp; (dead == false){
 //Death
 if dead = true
     {
-    physics_apply_force(x,y,0,7);   
+    physics_apply_force(x,y,0,40);   
     canShoot = false; 
 }
 
 if (php &lt; 0)
     instance_destroy();
-
 </string>
           </argument>
         </arguments>
@@ -377,7 +383,7 @@ draw_text(x,y+55,tally);
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>1</PhysicsObjectShape>
-  <PhysicsObjectDensity>0.600000023841858</PhysicsObjectDensity>
+  <PhysicsObjectDensity>0.0700000002980232</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
   <PhysicsObjectLinearDamping>1</PhysicsObjectLinearDamping>
@@ -386,9 +392,9 @@ draw_text(x,y+55,tally);
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
+    <point>80,32</point>
+    <point>0,32</point>
     <point>0,0</point>
-    <point>8,0</point>
-    <point>8,12</point>
-    <point>0,12</point>
+    <point>80,0</point>
   </PhysicsShapePoints>
 </object>
