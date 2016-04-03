@@ -34,6 +34,9 @@
     <script>scripts\scr_tracking.gml</script>
     <script>scripts\scr_follow.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_cool</font>
+  </fonts>
   <objects name="objects">
     <objects name="dudes">
       <object>objects\obj_soldier</object>
@@ -54,10 +57,10 @@
       <object>objects\obj_birdspawner</object>
       <object>objects\obj_camera</object>
       <object>objects\obj_particle_control</object>
+      <object>objects\obj_control</object>
       <object>objects\obj_grid</object>
     </objects>
     <object>objects\obj_floor</object>
-    <object>objects\obj_control</object>
     <object>objects\obj_ufo</object>
     <object>objects\obj_beam</object>
     <object>objects\obj_tri</object>
