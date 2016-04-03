@@ -97,7 +97,7 @@
   <PhysicsObjectAngularDamping>5</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
-  <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
+  <PhysicsObjectKinematic>-1</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>2,2</point>
     <point>2,2</point>
