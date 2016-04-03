@@ -29,6 +29,8 @@
 jump = false
 xspeed = 10;
 canShoot = false;
+
+cannon = instance_create(x,y,obj_barrel);
 </string>
           </argument>
         </arguments>
@@ -141,6 +143,11 @@ if (touch_ground = false)
 
 xdis = (obj_ufo.phy_position_x - phy_position_x);
 xspeed = clamp(xspeed,0,10);
+
+image_xscale = sign(phy_speed_x)
+    if image_xscale = 0
+        image_xscale = 1
+
 
 if (xdis &gt; 170) &amp;&amp; (touch_ground = true) &amp;&amp; !(phy_rotation &gt;= 10 or phy_rotation &lt;= -10){
     canShoot = false;
