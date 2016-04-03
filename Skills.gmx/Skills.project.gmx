@@ -9,6 +9,7 @@
     <sprite>sprites\dudes</sprite>
     <sprite>sprites\spr_bear</sprite>
     <sprite>sprites\spr_soldier</sprite>
+    <sprite>sprites\spr_rpgsol</sprite>
     <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_ufo</sprite>
     <sprite>sprites\spr_beam</sprite>
@@ -32,7 +33,6 @@
     <script>scripts\scr_ufocollide.gml</script>
     <script>scripts\isTouchingBeam.gml</script>
     <script>scripts\scr_tracking.gml</script>
-    <script>scripts\scr_follow.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_cool</font>
@@ -40,6 +40,7 @@
   <objects name="objects">
     <objects name="dudes">
       <object>objects\obj_soldier</object>
+      <object>objects\obj_rpgsol</object>
       <object>objects\obj_heli</object>
       <object>objects\obj_tank</object>
       <object>objects\obj_dudes</object>
