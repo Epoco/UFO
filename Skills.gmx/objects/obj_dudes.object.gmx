@@ -249,7 +249,7 @@ alarm[1] = 10
     {
     instance_destroy()
     dead = true;
-    obj_control.abducts += 1
+    scr_abduction(1)
     }
 
 

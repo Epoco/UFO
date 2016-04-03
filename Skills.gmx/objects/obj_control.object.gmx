@@ -73,6 +73,7 @@ picAlpha = 1
             <kind>1</kind>
             <string>level_up = false
 picAlpha = 1
+
 </string>
           </argument>
         </arguments>
@@ -156,7 +157,8 @@ alarm[0] = 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if abducts %10 = 0 and abducts != 0
+            <string>player_level = floor(abducts/10)+1
+if abducts %10  = 0 and abducts != 0 
 {
     level_up = true
     picAlpha = 1
@@ -185,7 +187,8 @@ if level_up = true and alarm[2] &lt;=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for(xx = 0;xx&lt;30;xx++)
+            <string>
+for(xx = 0;xx&lt;30;xx++)
 {
 for(yy = 0;yy&lt;30;yy++)
 {
@@ -193,6 +196,14 @@ for(yy = 0;yy&lt;30;yy++)
 }
 }
 // Stats //
+
+draw_set_font(font_cool)
+draw_set_colour(c_white)
+draw_text_ext_transformed(view_xview[0]+765,view_yview[0]+50,"Abductions",1,200,1,1,0)
+draw_text_ext_transformed(view_xview[0]+838,view_yview[0]+25,"Level",1,200,1,1,0)
+draw_set_colour(c_lime)
+draw_text(view_xview[0]+925,view_yview[0]+50,abducts )
+draw_text(view_xview[0]+925,view_yview[0]+25,player_level )
 
 if level_up == true
 {
