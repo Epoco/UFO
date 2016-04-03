@@ -36,7 +36,7 @@
     <sprite>sprites\spr_btnSTART</sprite>
     <sprite>sprites\spr_TITLE</sprite>
     <sprite>sprites\spr_healthBorder</sprite>
-    <sprite>sprites\spr_defcon</sprite>
+    <sprite>sprites\spr_slider</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>

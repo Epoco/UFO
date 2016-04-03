@@ -52,12 +52,59 @@ grow[2] =  1.1
 grow[3] = 1.05
 
 picAlpha = 1
-
+ySlide =0
+defcon = 1
+Cdefcon = 1
+Adefcon = false
 //STATS//
 dmgReduction = 1
 beamStrength = 1
 shipSpeed = 1
 ufoHealth = 100
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if Cdefcon &lt; defcon
+{
+    ySlide += 1.2
+
+    if ySlide &lt;= (defcon-1) * 37.6
+    {
+        alarm[3] = 2
+    }
+    else
+        Cdefcon = defcon
+}
+else
+{
+    ySlide -= 1.2
+
+    if ySlide &gt;= (defcon-1) * 37.6
+    {
+        alarm[3] = 2
+    }
+    else
+    Cdefcon = defcon
+}
 </string>
           </argument>
         </arguments>
@@ -179,7 +226,20 @@ if level_up = true and alarm[2] &lt;=0
     level_up = false    
 }
 
-
+if abducts%50 = 0 and Adefcon = false and defcon &lt;5 and abducts&gt;0
+{  
+    Adefcon = true
+    defcon += 1
+    alarm[3] =1
+    }
+if Adefcon = true and abducts%50 != 0
+    Adefcon = false
+    /*
+else if keyboard_check_pressed(ord("N"))and defcon &gt;1
+{
+    defcon -= 1
+    alarm[3] =1
+}
 </string>
           </argument>
         </arguments>
@@ -227,7 +287,12 @@ draw_sprite(spr_healthBorder,0,view_xview[0]+view_wview[0]/2,view_yview[0]+25)
 draw_rectangle_colour(view_xview[0]+view_wview[0]/2+9,view_yview[0]+29,view_xview[0]+view_wview[0]/2+200-10-(200-2*ufoHealth),view_yview[0]+45,c_lime,c_lime,c_lime,c_lime,false)
 
 draw_set_alpha(0.5)
+draw_set_colour(c_black)
 draw_sprite(spr_defcon2,0,view_xview[0]+920,view_yview[0]+555)
+for (i = 1;i&lt;6;i++)
+draw_text(view_xview[0]+913+38,view_yview[0]+565+(188/5)*(i-1),i)
+draw_set_alpha(0.7)
+draw_sprite(spr_slider,0,view_xview[0]+920,view_yview[0]+555+ySlide)
 
 draw_set_alpha(1)
 if display == true
