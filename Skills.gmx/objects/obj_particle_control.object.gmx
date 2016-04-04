@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//effect 10
+
+alarm[0] = 1
+colour =  make_colour_rgb(irandom(255),irandom(255),irandom(255))
+
 Sname=part_system_create();
 
 particle1 = part_type_create();
@@ -44,6 +48,72 @@ emitter1 = part_emitter_create(Sname);
 part_emitter_region(Sname,emitter1,x,x,y,y,ps_shape_ellipse,1);
 part_emitter_stream(Sname,emitter1,particle1,5);
 
+//effect57
+ particle2 = part_type_create();
+part_type_shape(particle2,pt_shape_disk);
+part_type_size(particle2,0.10,0.10,0,0);
+part_type_scale(particle2,1.14,0.81);
+part_type_color3(particle2,c_yellow,c_yellow,c_yellow);
+part_type_alpha3(particle2,0.6,0.6,0.6);
+part_type_speed(particle2,2,3.22,-0.09,0);
+part_type_direction(particle2,0,359,-1,0);
+//part_type_gravity(particle2,0.40,270);
+part_type_orientation(particle2,0,0,0,0,0);
+part_type_blend(particle2,0);
+part_type_life(particle2,15,20);
+emitter2 = part_emitter_create(Sname);
+part_emitter_region(Sname,emitter2,x,x,y,y,ps_shape_rectangle,0);
+part_emitter_stream(Sname,emitter2,particle1,5);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+alarm[0] = 20
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+part_type_color3(particle2,colour,colour,colour);
 </string>
           </argument>
         </arguments>

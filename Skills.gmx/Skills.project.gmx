@@ -7,6 +7,8 @@
   <sounds name="sound">
     <sound>sound\snd_abduct</sound>
     <sound>sound\snd_move</sound>
+    <sound>sound\snd_abduct2</sound>
+    <sound>sound\snd_abduct3</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\dudes</sprite>

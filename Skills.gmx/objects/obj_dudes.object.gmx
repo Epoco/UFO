@@ -69,11 +69,14 @@ php = shp;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    scoretext=instance_create(x,y,obj_scoretext)
+            <string>    if dead = true or isTouchingBeam()
+    {
+    scoretext=instance_create(x,y,obj_scoretext)
     with(scoretext)
         {
         scoreplus = 50
         }
+    }
 </string>
           </argument>
         </arguments>
@@ -188,7 +191,7 @@ if (php &lt; 0)
 if (touch_ground = false) and jump == false
 {
     phy_fixed_rotation = false;
-    if phy_speed_y&gt;8 
+    if phy_speed_y&gt;4 
         dead = true
     else
         dead = false
