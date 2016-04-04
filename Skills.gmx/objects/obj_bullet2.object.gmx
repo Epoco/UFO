@@ -55,6 +55,8 @@ xx = lengthdir_x(50,ufoPos);
 yy = lengthdir_y(50,ufoPos);
 
 physics_apply_force(x,y,xx,yy)
+
+
 </string>
           </argument>
         </arguments>

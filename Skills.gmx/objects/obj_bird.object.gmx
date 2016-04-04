@@ -30,6 +30,7 @@ bounce_time = irandom_range(20,25)
 dead = false;
 shp = 100;
 php = shp;
+turkey = false
 
 if phy_position_x - obj_ufo.phy_position_x  &gt; 0
 {
@@ -42,7 +43,7 @@ else
     image_xscale = -1
     }
 
-image_speed=0.5
+image_speed=0.2
 
 </string>
           </argument>
@@ -95,7 +96,9 @@ physics_apply_impulse(x,y,0,-2.60)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if image_index = 5
+    image_index = 1
+
 if dead == false
 {
 phy_fixed_rotation = true
@@ -108,6 +111,7 @@ image_index = 1
 }
 if distance_to_object(obj_beam) &lt;= 0
 {
+turkey = true
 dead = true;
 physics_apply_force(x,y,0,-2)
 physics_apply_torque(0.5)
@@ -115,6 +119,12 @@ origSpeed = 0
         }
 if phy_position_y&lt; 0
 instance_destroy()
+
+if turkey = true
+{
+image_speed = 0
+image_index = 6
+}
 /*
 if (php &lt; 0){
     inst = instance_create(x,y,obj_scoretext)

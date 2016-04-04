@@ -52,9 +52,9 @@ grow[2] =  1.1
 grow[3] = 1.05
 
 picAlpha = 1
-ySlide =0
-defcon = 1
-Cdefcon = 1
+ySlide =37.6*4
+defcon = 5
+Cdefcon = 5
 Adefcon = false
 //STATS//
 dmgReduction = 1
@@ -213,8 +213,8 @@ alarm[0] = 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_level = floor(abducts/10)+1
-if abducts %10  = 0 and abducts != 0 
+            <string>player_level = floor(abducts/150)+1
+if abducts %150  = 0 and abducts != 0 
 {
     level_up = true
     picAlpha = 1
@@ -226,10 +226,10 @@ if level_up = true and alarm[2] &lt;=0
     level_up = false    
 }
 
-if abducts%50 = 0 and Adefcon = false and defcon &lt;5 and abducts&gt;0
+if abducts%50 = 0 and Adefcon = false and defcon &gt;1 and abducts&gt;0 or keyboard_check_pressed(ord('M'))
 {  
     Adefcon = true
-    defcon += 1
+    defcon -= 1
     alarm[3] =1
     }
 if Adefcon = true and abducts%50 != 0
@@ -274,7 +274,7 @@ for(yy = 0;yy&lt;30;yy++)
 
 draw_set_font(font_cool)
 draw_set_colour(c_white)
-draw_text_ext_transformed(view_xview[0]+838,view_yview[0]+25,"Level",1,200,1,1,0)
+draw_text_ext_transformed(view_xview[0]+775,view_yview[0]+25,"Ship Level",1,200,1,1,0)
 draw_text_ext_transformed(view_xview[0]+765,view_yview[0]+50,"Abductions",1,200,1,1,0)
 draw_text_ext_transformed(view_xview[0]+830,view_yview[0]+75,"Points",1,200,1,1,0)
 draw_text_ext_transformed(view_xview[0]+view_wview[0]/2-125,view_yview[0]+25,"Health",1,200,1,1,0)
@@ -289,10 +289,12 @@ draw_rectangle_colour(view_xview[0]+view_wview[0]/2+9,view_yview[0]+29,view_xvie
 draw_set_alpha(0.5)
 draw_set_colour(c_black)
 draw_sprite(spr_defcon2,0,view_xview[0]+920,view_yview[0]+555)
-for (i = 1;i&lt;6;i++)
+for (i = 5;i&gt;0;i--)
 draw_text(view_xview[0]+913+38,view_yview[0]+565+(188/5)*(i-1),i)
 draw_set_alpha(0.7)
+draw_set_colour(c_white)
 draw_sprite(spr_slider,0,view_xview[0]+920,view_yview[0]+555+ySlide)
+draw_text(view_xview[0]+910,view_yview[0]+530,"defcon" )
 
 draw_set_alpha(1)
 if display == true

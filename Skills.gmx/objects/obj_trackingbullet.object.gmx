@@ -49,6 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>scr_tracking(obj_ufo,0.2);
+
 </string>
           </argument>
         </arguments>
