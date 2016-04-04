@@ -84,18 +84,24 @@ phy_fixed_rotation = false;
 
 if (touch_ground = false)
 {
-    if phy_speed&gt;4 || phy_speed &lt; -4
+    if phy_speed&gt;2.5 || phy_speed &lt; -2.5
         instance_destroy();
 }
 
-if  phy_speed &gt; 4 || phy_speed &lt; -4
+if  phy_speed &gt; 2.5 || phy_speed &lt; -2.5
     killer = true
 else   
     killer = false
 
-if killer == true
-    instance_change(obj_policepick,false);
-
+if killer == true{
+    cop = instance_change(obj_policepick,false);
+    with (cop)
+        {
+        phy_speed_x = other.phy_speed_x
+        phy_speed_y = other.phy_speed_y
+        phy_rotation = other.phy_rotation;
+        }
+}    
 xdis = (obj_ufo.phy_position_x - phy_position_x);
 phy_speed_x = clamp(phy_speed_x,-40,40);
 
@@ -184,6 +190,7 @@ else{
             <kind>1</kind>
             <string>draw_self()
 draw_set_colour(c_black)
+draw_text(x,y,killer);
 //draw_text(x,y-20,phy_rotation)
 </string>
           </argument>
