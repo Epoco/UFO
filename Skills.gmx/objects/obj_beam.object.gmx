@@ -66,11 +66,11 @@ floorlevel = 0
 
 if keyboard_check(vk_space)
     {
-    for (xx = 0;xx&lt;=15;xx++)
+    for (xx = 0;xx&lt;=15+global.length*4;xx++)
     part_particles_create(obj_particle_control.Sname, x, y+20+xx*7.5,  obj_particle_control.particle1, 1);
     x = obj_ufo.x
     y = obj_ufo.y +12.5
-    image_yscale = 1 * global.length;
+    image_yscale = 1 + 0.2*global.length;
     }
 else
     {

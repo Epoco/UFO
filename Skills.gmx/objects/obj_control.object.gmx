@@ -37,7 +37,7 @@ defconNum[3] = 7000;
 defconNum[2] = 8000;
 defconNum[1] = 600000000000000000000;
 
-lvlNum = 800
+lvlNum = 20
 
 alarm[0] = 5
 img = 0
@@ -53,6 +53,7 @@ display = false
 
 yChange = 0
 xChange = 0
+upRand = 0
 
 colnum = 0
 colour[0] = make_colour_rgb(255,255,255)
@@ -179,6 +180,8 @@ picAlpha -= 0.05
 
 xChange = choose(0,-5,5,10,-10)
 yChange= choose(0,10,-10,5,-5)
+xxChange = choose(0,-5,5,10,-10)
+yyChange= choose(0,10,-10,5,-5)
 alarm[1] = 5
 </string>
           </argument>
@@ -246,6 +249,8 @@ if player_level&gt;c_level
     c_level = player_level 
     picAlpha = 1
     level_up = true
+    scr_upgrade();   
+    upRand = irandom_range(-200,50)
 }
 if level_up = true and alarm[2] &lt;=0
 {
@@ -266,12 +271,7 @@ if Adefcon = true //and abducts%defconNum != 0
 defconReverse = 6-defcon
 
 //Upgrades
-if level_up = true
-    {
-    scr_upgrade();    
-}
-    
-        
+   
 
 </string>
           </argument>
@@ -333,6 +333,7 @@ draw_set_alpha(1)
 if level_up == true
 {
 draw_sprite_ext(spr_LevelUp,0,obj_ufo.x + xChange ,view_yview[0]+view_hview[0]/2-75 + yChange ,grow[colnum],grow[colnum],0,colour[colnum],picAlpha)
+draw_text_colour(obj_ufo.x+xxChange+upRand ,view_yview[0]+view_hview[0]/2-150+yyChange,upgrade,c_lime,c_lime,c_lime,c_lime,picAlpha)
 //draw_text_transformed_colour( view_xview[0]+ view_wview[0]/2 - 200,view_yview[0]+view_hview[0]/2-150,"LEVEL UP",5,5,0,colour[colnum],colour[colnum],colour[colnum],colour[colnum],1)
 }
 </string>

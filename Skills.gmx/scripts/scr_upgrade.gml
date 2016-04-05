@@ -1,24 +1,24 @@
-stat = irandom_range(0,5);
+stat = irandom_range(1,5);
 
 if (stat == 0){
     global.uspeed += 100;
-    upgrade = "UFO Speed";
+    upgrade = "Plus UFO Speed";
 }
 else if (stat == 1){
     global.abduct += 0.05;
-    upgrade = "Abduction Speed";
+    upgrade = "Plus Abduction Speed";
 } 
 else if (stat == 2){
     global.damage -= 0.02;  
-    upgrade = "Damage Reduction";
+    upgrade = "Plus Damage Reduction";
 }
 else if (stat == 3){
     global.recoil -= 0.02;
-    upgrade = "Knockback Reduction";        
+    upgrade = "Plus Knockback Reduction";        
 }
 else if (stat == 4){
-    global.length += 0.02;   
-    upgrade = "Beam Length"; 
+    global.length += 1;   
+    upgrade = "Plus Beam Length"; 
 }
 
  
