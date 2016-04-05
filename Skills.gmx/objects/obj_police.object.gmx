@@ -88,7 +88,7 @@ if (touch_ground = false)
     if phy_speed&gt;2.5 || phy_speed &lt; -2.5
         instance_destroy();
 }
-if !(phy_speed_x &lt; 0.5 &amp;&amp; phy_speed_x &gt; -0.5)
+if !(phy_speed_x &lt; 0.2 &amp;&amp; phy_speed_x &gt; -0.2)
     image_xscale = sign(phy_speed_x) 
 else
     image_scale = 1;

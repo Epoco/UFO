@@ -61,14 +61,14 @@ range = irandom_range(120,220)
     with(bullet)
         {
         ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
-        xx = lengthdir_x(100,ufoPos);
-        yy = lengthdir_y(100,ufoPos);
+        xx = lengthdir_x(150,ufoPos);
+        yy = lengthdir_y(150,ufoPos);
         //physics_apply_impulse(x,y,xx,yy);
         }
     }
 
 if (canShoot = true){
-    alarm[2] = 60;
+    alarm[2] = 75;
 }
 </string>
           </argument>

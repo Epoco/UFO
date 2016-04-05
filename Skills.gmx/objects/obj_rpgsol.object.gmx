@@ -59,14 +59,14 @@ php = 100;
 
     with(bullet){
         ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
-        xx = lengthdir_x(10,ufoPos);
-        yy = lengthdir_y(10,ufoPos);
+        xx = lengthdir_x(20,ufoPos);
+        yy = lengthdir_y(20,ufoPos);
         physics_apply_impulse(x,y,xx,yy);
         }
     }
 
 if (canShoot = true){
-    alarm[2] = 170;
+    alarm[2] = 190;
 }
 </string>
           </argument>
