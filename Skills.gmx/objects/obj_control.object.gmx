@@ -37,7 +37,7 @@ defconNum[3] = 7000;
 defconNum[2] = 8000;
 defconNum[1] = 600000000000000000000;
 
-lvlNum = 20
+lvlNum = 250
 
 alarm[0] = 5
 img = 0
