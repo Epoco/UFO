@@ -352,8 +352,6 @@ alarm[1] = 10
             <kind>1</kind>
             <string>draw_self()
 draw_set_colour(c_black)
-draw_text(x,y+10,phy_rotation);
-//draw_text(x,y-20,phy_rotation)
 with(cannon)
     {
     x = other.x

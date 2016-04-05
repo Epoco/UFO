@@ -37,9 +37,9 @@ choice = choose(1,2)
 if (choice == 1)
     i1 = choose(0,4,8,12);
 
-else if choice == 2{
-    sprite_index = spr_dudeb;
-    i1 = 0;
+else if (choice == 2){
+    sprite_index = spr_dudeb
+    i1 = choose(0,4);
 }    
 
 i2 = i1 + 3;
