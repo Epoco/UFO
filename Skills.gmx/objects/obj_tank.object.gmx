@@ -387,7 +387,6 @@ if dead = true
             <kind>1</kind>
             <string>draw_self()
 draw_set_colour(c_black)
-draw_text(x,y+10,phy_speed_y);
 with(cannon)
     {
     x = other.x

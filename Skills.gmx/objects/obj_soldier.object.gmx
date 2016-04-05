@@ -31,7 +31,7 @@ xspeed = 50;
 canShoot = false;
 shp = 100;
 php = 100;
-range = irandom_range(100,200)
+range = irandom_range(120,220)
 </string>
           </argument>
         </arguments>
@@ -68,7 +68,7 @@ range = irandom_range(100,200)
     }
 
 if (canShoot = true){
-    alarm[2] = 120;
+    alarm[2] = 60;
 }
 </string>
           </argument>
