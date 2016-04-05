@@ -275,6 +275,7 @@ alarm[1] = 10
     {
     instance_destroy()
     scoretext=instance_create(x,y,obj_scoretext)
+    scr_abduction(75)
     with(scoretext)
         {
         scoreplus = 75

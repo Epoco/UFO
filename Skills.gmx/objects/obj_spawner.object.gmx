@@ -73,11 +73,11 @@ if (obj_spawncontrol.dudecount &lt; obj_spawncontrol.maxdudecount) &amp;&amp; di
             instance_create(x,y,obj_rpgsol)
             
     rnd = random(100)
-        if rnd &lt;= chancetank
+        if rnd &lt;= chancetank &amp;&amp; instance_number(obj_tank)&lt;6
             instance_create(x,y,obj_tank);
             
     rnd = random(100)
-        if rnd &lt;= chanceheli
+        if rnd &lt;= chanceheli &amp;&amp; instance_number(obj_heli)&lt;6
             instance_create(x,y-200,obj_heli);
     
     instance_create(x,y,obj_dudes)
