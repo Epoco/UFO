@@ -96,7 +96,7 @@ php = 100;
     }
 
 if (canShoot = true){
-    alarm[2] = 190;
+    alarm[2] = 230;
 }
 </string>
           </argument>
