@@ -190,7 +190,7 @@ if (touch_ground = false)
 {
     phy_fixed_rotation = false;
     if phy_speed_y &gt; 4
-        instance_destroy();
+        dead = true;
 }
 else{
     phy_fixed_rotation = false;
@@ -228,7 +228,7 @@ else {
     physics_apply_force(x,y,0,5);
 }
 
-
+touch_ground = false;
 </string>
           </argument>
         </arguments>
@@ -333,7 +333,9 @@ alarm[1] = 10
           <argument>
             <kind>1</kind>
             <string>//321321321
-  touch_ground = true;
+touch_ground = true;
+if dead = true
+    instance_destroy();
 </string>
           </argument>
         </arguments>

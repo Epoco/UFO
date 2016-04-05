@@ -300,6 +300,8 @@ alarm[1] = 10
             <kind>1</kind>
             <string>//321321321
   touch_ground = true;
+  if dead = true
+    instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -324,6 +326,8 @@ alarm[1] = 10
             <kind>1</kind>
             <string>//321321321
   touch_ground = true;
+  if dead = true
+    instance_destroy();
 </string>
           </argument>
         </arguments>
