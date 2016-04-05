@@ -73,7 +73,7 @@
           <argument>
             <kind>1</kind>
             <string>instance_destroy()
-obj_control.ufoHealth -= 3 * global.damage
+obj_control.ufoHealth -= 7 * global.damage
 
 effect_create_above(ef_explosion, x, y, 0, c_orange);
 ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);

@@ -200,9 +200,13 @@ else{
 xdis = (obj_ufo.phy_position_x - phy_position_x);
 xspeed = clamp(xspeed,0,10);
 
-image_xscale = sign(phy_speed_x)
-    if image_xscale = 0
-        image_xscale = 1
+if !(phy_speed_x &lt; 0.5 &amp;&amp; phy_speed_x &gt; -0.5)
+    image_xscale = sign(phy_speed_x) 
+else
+    image_scale = 1;
+        if image_xscale = 0
+            image_xscale = 1
+
 
 
 if (xdis &gt; 170) &amp;&amp; (touch_ground = true) &amp;&amp; !(phy_rotation &gt;= 10 or phy_rotation &lt;= -10){

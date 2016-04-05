@@ -183,6 +183,13 @@ phy_speed_x = clamp(phy_speed_x,-20,20);
 if (php &lt; 0)
     instance_destroy();
 
+if !(phy_speed_x &lt; 0.5 &amp;&amp; phy_speed_x &gt; -0.5)
+    image_xscale = sign(phy_speed_x) 
+else
+    image_scale = 1;
+        if image_xscale = 0
+            image_xscale = 1
+
 insnear = instance_nearest(x,y,par_dudes)
 xdis = (insnear.phy_position_x - phy_position_x)
 

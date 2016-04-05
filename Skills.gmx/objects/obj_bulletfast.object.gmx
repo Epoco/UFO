@@ -79,7 +79,7 @@ phy_speed_y = yy*0.08
           <argument>
             <kind>1</kind>
             <string>instance_destroy()
-obj_control.ufoHealth -= 3 * global.damage
+obj_control.ufoHealth -= 7 * global.damage
 
 
 ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
