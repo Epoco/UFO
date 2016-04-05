@@ -29,6 +29,7 @@
 jump = false
 xspeed = 10;
 canShoot = false;
+dead = false;
 
 cannon = instance_create(x,y,obj_barrel);
 </string>
