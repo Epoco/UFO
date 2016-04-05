@@ -110,6 +110,7 @@
     <object>objects\par_floor</object>
     <object>objects\obj_gameover</object>
     <object>objects\obj_resetbutton</object>
+    <object>objects\obj_instructions</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

@@ -53,8 +53,7 @@ audio_play_sound(snd_startmenu,10,true)</code>
   </views>
   <instances>
     <instance objName="obj_btnStart" x="448" y="320" name="inst_9CDB9CE0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_btnHelp" x="448" y="400" name="inst_81FDFB1F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_title" x="416" y="192" name="inst_DF7CC382" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_title" x="400" y="192" name="inst_DF7CC382" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_startcontrol" x="0" y="0" name="inst_18BAF06B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

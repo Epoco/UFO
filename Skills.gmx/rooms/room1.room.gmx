@@ -53,7 +53,7 @@ audio_play_sound(snd_gamesong,10,true)</code>
   </views>
   <instances>
     <instance objName="obj_ufo" x="768" y="6304" name="inst_0F39070C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_camera" x="128" y="32" name="inst_91709468" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_camera" x="352" y="448" name="inst_91709468" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_control" x="0" y="0" name="inst_21087EDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawncontrol" x="24" y="4" name="inst_FF37878D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_birdspawner" x="288" y="6016" name="inst_6302EAFA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -132,6 +132,7 @@ audio_play_sound(snd_gamesong,10,true)</code>
     <instance objName="obj_spawner" x="8544" y="6592" name="inst_B76404C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="8768" y="6592" name="inst_1B1AA705" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bgMain" x="96" y="0" name="inst_CEB586DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_instructions" x="192" y="0" name="inst_55214757" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bg_floors" x="3072" y="6208" w="32" h="32" xo="128" yo="128" id="10000583" name="inst_AEC31EFF" depth="12" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
