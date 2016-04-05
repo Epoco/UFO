@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>touch_ground = false;
 jump = false
-xspeed = 10;
+xspeed = 30;
 canMove = true;
 count = 0;
 killer = false;
@@ -80,10 +80,11 @@ killer = false;
           <argument>
             <kind>1</kind>
             <string>scr_beam(-30,0.5)
-phy_fixed_rotation = false;
+phy_fixed_rotation = true;
 
 if (touch_ground = false)
-{
+{   
+    phy_fixed_rotation = false;
     if phy_speed&gt;2.5 || phy_speed &lt; -2.5
         instance_destroy();
 }
@@ -93,17 +94,8 @@ if  phy_speed&gt;2.5 || phy_speed &lt; -2.5
 else   
     killer = false
 
-if killer == false{
-    cop = instance_change(obj_policenonpick,false);
-    with (cop)
-        {
-        phy_speed_x = other.phy_speed_x;
-        phy_speed_y = other.phy_speed_y;
-        phy_rotation = other.phy_rotation;
-        }
-}  
 xdis = (obj_ufo.phy_position_x - phy_position_x);
-phy_speed_x = clamp(phy_speed_x,-40,40);
+phy_speed_x = clamp(phy_speed_x,-150,150);
 
 if (canMove == true) &amp;&amp; count == 0{
     if (xdis &gt; abs(170)) &amp;&amp; (touch_ground = true) &amp;&amp; !(phy_rotation &gt;= 10 or phy_rotation &lt;= -10){
@@ -143,6 +135,9 @@ else{
           <argument>
             <kind>1</kind>
             <string>touch_ground = true;
+
+if killer == true
+    instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -190,7 +185,8 @@ else{
             <kind>1</kind>
             <string>if killer==true{
     with (other){
-        instance_destroy();
+        if !(obj_tank)
+            instance_destroy();
     }
 }
 </string>

@@ -66,8 +66,7 @@
       <object>objects\obj_heli</object>
       <object>objects\obj_tank</object>
       <object>objects\obj_barrel</object>
-      <object>objects\obj_policepick</object>
-      <object>objects\obj_policenonpick</object>
+      <object>objects\obj_police</object>
       <object>objects\obj_dudes</object>
       <object>objects\obj_bear</object>
       <object>objects\par_dudes</object>

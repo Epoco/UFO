@@ -60,6 +60,30 @@ cannon = instance_create(x,y,obj_barrel);
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if touch_ground = true
+    instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -159,12 +183,20 @@ phy_rotation = 0
           <argument>
             <kind>1</kind>
             <string>scr_beam(-30,0.5)
-
+with(cannon){
+    image_angle = clamp(image_angle,0+other.phy_rotation,180+other.phy_rotation)
+}
 if (touch_ground = false)
 {
     phy_fixed_rotation = false;
 }
-
+else{
+    phy_fixed_rotation = false;
+    if phy_rotation &gt; 170{
+        if !alarm[3]
+            alarm[3] = 90
+    }
+}
 xdis = (obj_ufo.phy_position_x - phy_position_x);
 xspeed = clamp(xspeed,0,10);
 
@@ -320,12 +352,13 @@ alarm[1] = 10
             <kind>1</kind>
             <string>draw_self()
 draw_set_colour(c_black)
+draw_text(x,y+10,phy_rotation);
 //draw_text(x,y-20,phy_rotation)
 with(cannon)
     {
     x = other.x
     y = other.y-17
-    image_angle = point_direction(x,y,obj_ufo.x,obj_ufo.y)
+    image_angle = point_direction(x,y,obj_ufo.x,obj_ufo.y);
     }
 </string>
           </argument>
