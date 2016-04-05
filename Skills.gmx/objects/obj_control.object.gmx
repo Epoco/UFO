@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = 5
+            <string>global.uspeed = 0;
+global.abduct = 1;
+global.damage = 1;
+global.recoil = 1;
+global.length = 0;
+
+alarm[0] = 5
 img = 0
 room_speed = 60
 player_level = 1

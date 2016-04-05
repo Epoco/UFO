@@ -1,7 +1,7 @@
 stat = irandom_range(0,5);
 
 if (stat == 0){
-    global.speed += 100;
+    global.uspeed += 100;
 }
 else if (stat == 1){
     global.abduct += 0.05;
