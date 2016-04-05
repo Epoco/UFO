@@ -57,7 +57,7 @@ phy_speed_y = yy*0.05
             <kind>1</kind>
             <string>phy_speed_x = xx*0.08
 phy_speed_y = yy*0.08
-
+image_angle = ufoPos
 </string>
           </argument>
         </arguments>

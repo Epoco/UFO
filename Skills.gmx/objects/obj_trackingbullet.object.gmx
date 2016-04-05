@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>path = path_add();
+image_xscale = 2
+image_yscale = 2
 </string>
           </argument>
         </arguments>
@@ -49,6 +51,7 @@
           <argument>
             <kind>1</kind>
             <string>scr_tracking(obj_ufo,0.2);
+image_angle = ufoPos
 
 </string>
           </argument>

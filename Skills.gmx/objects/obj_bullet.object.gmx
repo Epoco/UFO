@@ -30,7 +30,7 @@
     yy = lengthdir_y(100,ufoPos);
 
 audio_play_sound(snd_shoot,10,false)
-
+image_angle = ufoPos
 
 phy_speed_x = xx*0.05
 phy_speed_y = yy*0.05
@@ -58,6 +58,7 @@ phy_speed_y = yy*0.05
             <kind>1</kind>
             <string>phy_speed_x = xx*0.03
 phy_speed_y = yy*0.03
+image_angle = ufoPos
 
 </string>
           </argument>

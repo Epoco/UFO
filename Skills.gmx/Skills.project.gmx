@@ -45,6 +45,7 @@
     <sprite>sprites\spr_healthBorder</sprite>
     <sprite>sprites\spr_slider</sprite>
     <sprite>sprites\spr_barrel</sprite>
+    <sprite>sprites\spr_bull</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_floors</background>
