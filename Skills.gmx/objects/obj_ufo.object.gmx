@@ -31,6 +31,79 @@ canDMG = true;
 shp = 100
 php = shp
 dead=false
+deadactivate = true
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>effect_create_above(ef_explosion,x ,y,2,c_orange)
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>effect_create_above(ef_explosion,x +52,y+66,1,c_orange)
+alarm[3] = 10
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>effect_create_above(ef_explosion,x -32,y-56,1,c_orange)
+alarm[2] = 10
 </string>
           </argument>
         </arguments>
@@ -78,10 +151,11 @@ dead=false
             <kind>1</kind>
             <string>php = clamp(php,0,100);
 
-phy_rotation = 0
+
 
 if dead = false
 {
+phy_rotation = 0
 physics_apply_force(x,y,0,-130)
 
 if keyboard_check(ord('W'))
@@ -106,9 +180,17 @@ if keyboard_check(ord('P'))
 }    
 if obj_control.ufoHealth &lt;= 0
     {
+    image_speed = max(0,image_speed - 0.005)
     dead = true
+    phy_fixed_rotation = false
     physics_apply_force(x,y,0,400)
-    physics_apply_torque(1000)
+    physics_apply_torque(100000)
+    if deadactivate = true
+        {
+        instance_create(x,y,obj_gameover)
+        alarm[1] = 1
+        deadactivate = false
+        }
     }
     
 
@@ -219,6 +301,29 @@ with(inst)
     canDMG = false;
     alarm[0] = 30;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="17">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>obj_control.ufoHealth = 0
 </string>
           </argument>
         </arguments>

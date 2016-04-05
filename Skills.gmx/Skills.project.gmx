@@ -105,6 +105,8 @@
     <object>objects\object8</object>
     <object>objects\obj_bomb</object>
     <object>objects\par_floor</object>
+    <object>objects\obj_gameover</object>
+    <object>objects\obj_resetbutton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
