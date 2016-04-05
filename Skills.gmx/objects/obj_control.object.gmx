@@ -224,6 +224,12 @@ alarm[0] = 5
             <kind>1</kind>
             <string>ufoHealth = max(0,ufoHealth)
 
+global.uspeed = clamp(global.uspeed,0,500);
+global.abduct = clamp(global.abduct,1,1.5);
+global.damage = clamp(global.damage,1,0.5);
+global.recoil = clamp(global.recoil,1,0.5);
+global.length = clamp(global.length,1,1.5);
+
 player_level = floor(abducts/150)+1
 if abducts %150  = 0 and abducts != 0 
 {
@@ -255,12 +261,7 @@ if level_up = true
 }
     
         
-                /*
-else if keyboard_check_pressed(ord("N"))and defcon &gt;1
-{
-    defcon -= 1
-    alarm[3] =1
-}
+
 </string>
           </argument>
         </arguments>

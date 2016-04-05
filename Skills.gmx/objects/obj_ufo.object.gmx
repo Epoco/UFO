@@ -159,14 +159,14 @@ phy_rotation = 0
 physics_apply_force(x,y,0,-130)
 
 if keyboard_check(ord('W'))
-    physics_apply_force(x,y,0,-500)
+    physics_apply_force(x,y,0,-500 - global.uspeed)
 if keyboard_check(ord('S'))
-    physics_apply_force(x,y,0,500)
+    physics_apply_force(x,y,0,500 + global.uspeed)
 
 if keyboard_check(ord('A'))
-    physics_apply_force(x,y,-500,0)
+    physics_apply_force(x,y,-500 - global.uspeed,0)
 if keyboard_check(ord('D'))
-    physics_apply_force(x,y,500,0)
+    physics_apply_force(x,y,500  + global.uspeed,0)
 
 phy_rotation = clamp(phy_speed_x*1.2,-40,40)
 phy_speed_x = clamp(phy_speed_x,-10,10)

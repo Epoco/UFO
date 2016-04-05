@@ -102,7 +102,6 @@
     <object>objects\obj_tri</object>
     <object>objects\obj_tri2</object>
     <object>objects\obj_scoretext</object>
-    <object>objects\object8</object>
     <object>objects\obj_bomb</object>
     <object>objects\par_floor</object>
     <object>objects\obj_gameover</object>
