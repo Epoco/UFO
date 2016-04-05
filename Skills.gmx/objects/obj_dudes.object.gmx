@@ -181,9 +181,10 @@ if (phy_speed_x &gt; 0) || (phy_speed_x &lt; 0){
 else
     image_speed = 0;
 
-if !(phy_speed_x &lt; 0.5 &amp;&amp; phy_speed_x &gt; -0.5)
+if !(phy_speed_x &lt; 0.2 &amp;&amp; phy_speed_x &gt; -0.2)
     image_xscale = sign(phy_speed_x) 
 else
+    image_index = i1;
     image_scale = 1;
         if image_xscale = 0
             image_xscale = 1

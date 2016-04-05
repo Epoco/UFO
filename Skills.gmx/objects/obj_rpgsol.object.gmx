@@ -143,9 +143,10 @@ if phy_speed_x &gt; 0 || phy_speed_x &lt; 0
     image_speed = 0.2
 else
     image_speed = 0;
-if !(phy_speed_x &lt; 0.5 &amp;&amp; phy_speed_x &gt; -0.5)
+if !(phy_speed_x &lt; 0.2 &amp;&amp; phy_speed_x &gt; -0.2)
     image_xscale = sign(phy_speed_x) 
 else
+    image_index = 0;
     image_scale = 1;
         if image_xscale = 0
             image_xscale = 1
@@ -168,7 +169,7 @@ if (phy_rotation &gt;= 10 or phy_rotation &lt;= -10) and alarm[0] &lt;= 0
     alarm[0] = 30
 }
 //Movement
-if (xdis &gt; abs(150)){
+if (xdis &gt; abs(200)){
     physics_apply_force(x,y,sign(xdis) * xspeed,0);
 }
 else{
