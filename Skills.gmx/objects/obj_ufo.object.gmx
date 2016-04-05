@@ -180,6 +180,8 @@ if keyboard_check(ord('P'))
 }    
 if obj_control.ufoHealth &lt;= 0
     {
+    with(obj_beam)
+        instance_destroy()
     image_speed = max(0,image_speed - 0.005)
     dead = true
     phy_fixed_rotation = false

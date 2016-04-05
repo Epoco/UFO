@@ -37,7 +37,7 @@ defconNum[3] = 7000;
 defconNum[2] = 8000;
 defconNum[1] = 600000000000000000000;
 
-lvlNum = 250
+lvlNum = 175
 
 alarm[0] = 5
 img = 0
@@ -176,7 +176,7 @@ colnum = 0
 else
 colnum += 1
 
-picAlpha -= 0.05
+picAlpha -= 0.03
 
 xChange = choose(0,-5,5,10,-10)
 yChange= choose(0,10,-10,5,-5)
@@ -255,7 +255,7 @@ if player_level&gt;c_level
 if level_up = true and alarm[2] &lt;=0
 {
     display = true
-    alarm[2] = 90
+    alarm[2] = 140
     //level_up = false    
 }
 
