@@ -56,6 +56,9 @@ cannon = instance_create(x,y,obj_barrel);
             <kind>1</kind>
             <string>with(cannon)
     instance_destroy();
+    
+audio_play_sound(snd_explosion,10,false)
+effect_create_above(ef_explosion, x, y, 1, c_orange);
 </string>
           </argument>
         </arguments>
