@@ -71,6 +71,7 @@
       <object>objects\obj_bear</object>
       <object>objects\par_dudes</object>
       <object>objects\obj_bullet</object>
+      <object>objects\obj_bulletfast</object>
       <object>objects\obj_bullet2</object>
       <object>objects\obj_trackingbullet</object>
       <object>objects\obj_bird</object>

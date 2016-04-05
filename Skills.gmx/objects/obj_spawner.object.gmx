@@ -30,6 +30,7 @@ chancesoldier = 2
 chancerpgsoldier = 2
 chancetank = 1
 chancepolicecar = 1
+chanceheli = 1
 
 </string>
           </argument>
@@ -53,7 +54,14 @@ chancepolicecar = 1
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = irandom_range(10,30)
+            <string>chancesoldier = obj_control.defconReverse*2
+chancetank = obj_control.defconReverse*2 - 6
+chancerpgsoldier = obj_control.defconReverse*3 - 3
+chancepolicecar = obj_control.defconReverse*2 - 2
+chanceheli = obj_control.defconReverse - 4 
+
+
+alarm[0] = irandom_range(10,30)
 if (obj_spawncontrol.dudecount &lt; obj_spawncontrol.maxdudecount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2
     {
     rnd = random(100)
@@ -67,9 +75,36 @@ if (obj_spawncontrol.dudecount &lt; obj_spawncontrol.maxdudecount) &amp;&amp; di
     rnd = random(100)
         if rnd &lt;= chancetank
             instance_create(x,y,obj_tank);
+            
+    rnd = random(100)
+        if rnd &lt;= chanceheli
+            instance_create(x,y-200,obj_heli);
     
     instance_create(x,y,obj_dudes)
     }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//draw_text(30,30,obj_control.defconReverse)
 </string>
           </argument>
         </arguments>

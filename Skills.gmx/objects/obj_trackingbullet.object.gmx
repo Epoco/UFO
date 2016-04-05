@@ -75,7 +75,7 @@
             <string>instance_destroy()
 obj_control.ufoHealth -= 3
 
-
+effect_create_above(ef_explosion, x, y, 0, c_orange);
 ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
     xx = lengthdir_x(200,ufoPos);
     yy = lengthdir_y(200,ufoPos);

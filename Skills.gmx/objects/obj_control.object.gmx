@@ -56,11 +56,14 @@ ySlide =37.6*4
 defcon = 5
 Cdefcon = 5
 Adefcon = false
+defconReverse=1
 //STATS//
 dmgReduction = 1
 beamStrength = 1
 shipSpeed = 1
 ufoHealth = 100
+
+
 </string>
           </argument>
         </arguments>
@@ -213,7 +216,9 @@ alarm[0] = 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_level = floor(abducts/150)+1
+            <string>ufoHealth = max(0,ufoHealth)
+
+player_level = floor(abducts/150)+1
 if abducts %150  = 0 and abducts != 0 
 {
     level_up = true
@@ -234,6 +239,8 @@ if abducts%50 = 0 and Adefcon = false and defcon &gt;1 and abducts&gt;0 or keybo
     }
 if Adefcon = true and abducts%50 != 0
     Adefcon = false
+    
+defconReverse = 6-defcon
     /*
 else if keyboard_check_pressed(ord("N"))and defcon &gt;1
 {

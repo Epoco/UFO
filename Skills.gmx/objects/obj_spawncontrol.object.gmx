@@ -63,6 +63,8 @@ instance_activate_object(obj_control)
 instance_activate_object(obj_beam)
 */
 
+maxdudecount = 100+50*obj_control.defconReverse
+
 with(par_dudes)
     {
     if distance_to_object(obj_ufo) &gt; 3000

@@ -30,6 +30,7 @@ image_speed = 0.5
 canDMG = true;
 shp = 100
 php = shp
+dead=false
 </string>
           </argument>
         </arguments>
@@ -78,19 +79,23 @@ php = shp
             <string>php = clamp(php,0,100);
 
 phy_rotation = 0
-physics_apply_force(x,y,0,-210)
+
+if dead = false
+{
+physics_apply_force(x,y,0,-130)
 
 if keyboard_check(ord('W'))
-    physics_apply_force(x,y,0,-400)
+    physics_apply_force(x,y,0,-500)
 if keyboard_check(ord('S'))
-    physics_apply_force(x,y,0,400)
+    physics_apply_force(x,y,0,500)
 
 if keyboard_check(ord('A'))
-    physics_apply_force(x,y,-400,0)
+    physics_apply_force(x,y,-500,0)
 if keyboard_check(ord('D'))
-    physics_apply_force(x,y,400,0)
-    
+    physics_apply_force(x,y,500,0)
+
 phy_rotation = clamp(phy_speed_x*1.2,-40,40)
+phy_speed_x = clamp(phy_speed_x,-10,10)
 
 if keyboard_check(ord('P'))
     { 
@@ -98,6 +103,16 @@ if keyboard_check(ord('P'))
         with(bomb)
             on = true;
             }
+}    
+if obj_control.ufoHealth &lt;= 0
+    {
+    dead = true
+    physics_apply_force(x,y,0,400)
+    physics_apply_torque(1000)
+    }
+    
+
+
 /*
 inst = (collision_rectangle(x-45,y+10,x+45,y+150,obj_dudes,1,1))
 with(inst)
@@ -265,12 +280,14 @@ draw_self()
 draw_set_color(c_red)
 draw_rectangle(x-45,y+10,x+45,y+150,0)
 */
+if dead = false
+{
 
 if keyboard_check(ord('A'))
     image_xscale = 1
 if keyboard_check(ord('D'))
     image_xscale = -1
-    
+}
 //image_speed = phy_speed_x*0.1+sign(phy_speed_x)*0.2
 </string>
           </argument>
@@ -280,7 +297,7 @@ if keyboard_check(ord('D'))
   </events>
   <PhysicsObject>-1</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
-  <PhysicsObjectShape>1</PhysicsObjectShape>
+  <PhysicsObjectShape>2</PhysicsObjectShape>
   <PhysicsObjectDensity>0.5</PhysicsObjectDensity>
   <PhysicsObjectRestitution>0.100000001490116</PhysicsObjectRestitution>
   <PhysicsObjectGroup>0</PhysicsObjectGroup>
@@ -290,9 +307,12 @@ if keyboard_check(ord('D'))
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>-1</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>0,0</point>
-    <point>88,0</point>
-    <point>88,48</point>
-    <point>0,48</point>
+    <point>64,44</point>
+    <point>28,44</point>
+    <point>0,32</point>
+    <point>6,18</point>
+    <point>44,0</point>
+    <point>84,20</point>
+    <point>88,34</point>
   </PhysicsShapePoints>
 </object>

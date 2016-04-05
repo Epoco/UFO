@@ -49,7 +49,10 @@ floorlevel = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y,obj_floor) and locked = false
+            <string>if obj_ufo.dead = false
+{
+
+if place_meeting(x,y,obj_floor) and locked = false
 {
 floorlevel = y
 locked = true
@@ -73,7 +76,7 @@ else
     x = -10000
     y = -10000
     }
-    
+}
 </string>
           </argument>
         </arguments>
