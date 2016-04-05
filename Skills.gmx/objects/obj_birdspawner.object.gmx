@@ -49,7 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>alarm[0] = irandom_range(30,60)
-if (obj_spawncontrol.birdcount &lt; obj_spawncontrol.maxbirdcount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2
+if (obj_spawncontrol.birdcount &lt; obj_spawncontrol.maxbirdcount) &amp;&amp; distance_to_object(obj_ufo)&gt;view_wview/2 and obj_ufo.phy_position_y &lt; 6300
     {
     inst = instance_create(choose(obj_ufo.phy_position_x-750,obj_ufo.phy_position_x+750),irandom_range(obj_ufo.phy_position_y-150,obj_ufo.phy_position_y-200),obj_bird)
     with(inst)

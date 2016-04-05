@@ -36,6 +36,36 @@ php = 100;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>    if dead = true or isTouchingBeam()
+    {
+    scoretext=instance_create(x,y,obj_scoretext)
+    with(scoretext)
+        {
+        scoreplus = 50
+        }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="2">
       <action>
         <libid>1</libid>
@@ -115,6 +145,7 @@ if (canShoot = true){
             <kind>1</kind>
             <string>physics_apply_impulse(x,y,0,-2)
 phy_rotation = 0
+phy_fixed_rotation = 1
 </string>
           </argument>
         </arguments>
@@ -165,7 +196,7 @@ phy_speed_x = clamp(phy_speed_x,-2,2);
 
 if (touch_ground = true)
 {
-if (phy_rotation &gt;= 10 or phy_rotation &lt;= -10) and alarm[0] &lt;= 0 
+if (phy_rotation &gt;= 5 or phy_rotation &lt;= -5) and alarm[0] &lt;= 0 
     alarm[0] = 30
 }
 //Movement
