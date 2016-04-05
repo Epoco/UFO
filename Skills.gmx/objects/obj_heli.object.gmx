@@ -59,7 +59,7 @@ dead= false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>audio_play_sound(snd_explosion,10,false)
     scoretext=instance_create(x,y,obj_scoretext)
     with(scoretext)
         {

@@ -188,6 +188,7 @@ if obj_control.ufoHealth &lt;= 0
     if deadactivate = true
         {
         instance_create(x,y,obj_gameover)
+        audio_play_sound(snd_explosion,10,false)
         alarm[1] = 1
         deadactivate = false
         }

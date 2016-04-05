@@ -28,7 +28,10 @@
             <string>ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
     xx = lengthdir_x(100,ufoPos);
     yy = lengthdir_y(100,ufoPos);
-    
+
+audio_play_sound(snd_shoot,10,false)
+
+
 phy_speed_x = xx*0.05
 phy_speed_y = yy*0.05
 </string>

@@ -9,6 +9,10 @@
     <sound>sound\snd_move</sound>
     <sound>sound\snd_abduct2</sound>
     <sound>sound\snd_abduct3</sound>
+    <sound>sound\snd_gamesong</sound>
+    <sound>sound\snd_startmenu</sound>
+    <sound>sound\snd_shoot</sound>
+    <sound>sound\snd_explosion</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\dudes</sprite>
