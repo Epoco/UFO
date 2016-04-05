@@ -241,7 +241,15 @@ if Adefcon = true and abducts%50 != 0
     Adefcon = false
     
 defconReverse = 6-defcon
-    /*
+
+//Upgrades
+if level_up = true
+    {
+    scr_upgrade();    
+}
+    
+        
+                /*
 else if keyboard_check_pressed(ord("N"))and defcon &gt;1
 {
     defcon -= 1

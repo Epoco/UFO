@@ -79,14 +79,14 @@ phy_speed_y = yy*0.08
           <argument>
             <kind>1</kind>
             <string>instance_destroy()
-obj_control.ufoHealth -= 3
+obj_control.ufoHealth -= 3 * global.damage
 
 
 ufoPos = point_direction(x,y,obj_ufo.x,obj_ufo.y);
     xx = lengthdir_x(200,ufoPos);
     yy = lengthdir_y(200,ufoPos);
 with(obj_ufo)
-    physics_apply_impulse(x,y,other.xx,other.yy)
+    physics_apply_impulse(x,y,other.xx * global.recoil,other.yy * global.recoil)
 
 </string>
           </argument>

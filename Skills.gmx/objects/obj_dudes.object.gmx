@@ -170,7 +170,7 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_beam(-10,0.5)
+            <string>scr_beam(-10 * global.abduct,0.5)
 //Animation
 if (image_index == i2) 
     image_index = i1;

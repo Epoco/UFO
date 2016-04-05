@@ -178,7 +178,7 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_beam(-10,0.5)
+            <string>scr_beam(-10 * global.abduct,0.5)
 phy_speed_x = clamp(phy_speed_x,-20,20);
 if (php &lt; 0)
     instance_destroy();

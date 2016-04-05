@@ -79,7 +79,7 @@ killer = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_beam(-30,0.5)
+            <string>scr_beam(-30 * global.abduct,0.5)
 phy_fixed_rotation = true;
 
 if (touch_ground = false)

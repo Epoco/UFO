@@ -182,7 +182,7 @@ phy_rotation = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_beam(-30,0.5)
+            <string>scr_beam(-30 * global.abduct,0.5)
 with(cannon){
     image_angle = clamp(image_angle,0+other.phy_rotation,180+other.phy_rotation)
 }
@@ -328,6 +328,29 @@ alarm[1] = 10
             <kind>1</kind>
             <string>//321321321
   touch_ground = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_tank">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//knkj
 </string>
           </argument>
         </arguments>
